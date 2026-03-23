@@ -1,0 +1,204 @@
+<!-- <UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:avalonia="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:FloorDigitalization.GenVPrincipal.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FloorDigitalization.Helpers"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="3000"
+        x:Class="FloorDigitalization.GenVPrincipal.Views.GenVPrincipalPostmaqCuneroPulidoView"
+        x:DataType="vm:GenVPrincipalPostmaqCuneroPulidoViewModel">
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:GenVPrincipalPostmaqCuneroPulidoViewModel/>
+    </Design.DataContext>
+    <UserControl.Resources>
+        <local:PropertyByNameConverter x:Key="PropertyByNameConverter"/>
+    </UserControl.Resources>
+
+
+    <TabControl Margin="5">
+        <!-- Postmaquinado -->
+        <TabItem Header="Postmaquinado">
+            <Grid RowDefinitions="Auto, Auto, *, Auto">
+                <Border Grid.Row="0" Margin="5" CornerRadius="10" Background="ForestGreen">
+                    <TextBlock Margin="5"
+                                FontSize="24" 
+                                HorizontalAlignment="Center"
+                                Text="GenV Principal ">
+                    </TextBlock>
+                </Border>
+                <Border Grid.Row="1">
+                    <StackPanel>
+                        <Grid ShowGridLines="False" Margin="5"
+                            ColumnDefinitions="Auto, Auto"
+                            RowDefinitions="Auto">
+                            <Label Grid.Row="0" Grid.Column="0">Nómina:</Label>
+                            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding UserPostmaquinado.Nomina}"></TextBox>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <ScrollViewer Grid.Row="2" AllowAutoHide="False">
+                    <StackPanel Orientation="Vertical">
+                    <Grid ColumnDefinitions="80, *, 150, 80, 200, 200, 100" Classes="HeaderRow">
+                        <TextBlock Grid.Column="0" Text="DCP"/>
+                        <TextBlock Grid.Column="1" Text="Descripción"/>
+                        <TextBlock Grid.Column="2" Text="Gage"/>
+                        <TextBlock Grid.Column="3" Text="Muestra"/>
+                        <TextBlock Grid.Column="4" Text="Frec. inspección"/>
+                        <TextBlock Grid.Column="5" Text="Frec. registro"/>
+                        <TextBlock Grid.Column="6" Text="Valor"/>
+                    </Grid>
+                    <ItemsControl x:Name="PostmaqItems" ItemsSource="{Binding PostmaquinadoItems}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="{x:Null}">
+                                <StackPanel>
+                                    <Grid ColumnDefinitions="80, *, 150, 80, 200, 200, 100" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                                        <Border Grid.Column="0" Grid.RowSpan="9" Classes="Cell">
+                                            <TextBlock Text="{Binding Code}" />
+                                        </Border>
+
+                                        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+                                            <TextBlock TextWrapping="Wrap">
+                                                <Run Text="{Binding Description}" />
+                                                <Run Text="{Binding BoldDescription}" FontWeight="Bold" />
+                                            </TextBlock>
+                                        </Border>
+
+                                        <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Gage}"/>
+                                        </Border>
+
+                                        <Border Grid.Column="3" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+                                            <TextBlock Text="{Binding Sample}"/>
+                                        </Border>
+
+                                        <Border Grid.Column="4" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+                                            <TextBlock Text="{Binding InspectionFrequency}" TextWrapping="Wrap"/>
+                                        </Border>
+
+                                        <!-- Frecuency-->
+                                            <!-- Start -->
+                                            <Border Classes="Cell"
+                                                IsVisible="{Binding HasStart1}"
+                                                Grid.Row="0"
+                                                Grid.Column="5"
+                                                Grid.RowSpan="3">
+                                                <TextBlock Text="Inicio de turno" TextWrapping="Wrap"/>
+                                            </Border>
+                                            <!-- Mid -->
+                                            <Border Classes="Cell"
+                                                IsVisible="{Binding HasMid1}"
+                                                Grid.Row="3"
+                                                Grid.Column="5"
+                                                Grid.RowSpan="3">
+                                                <TextBlock Text="Mitad de turno" TextWrapping="Wrap"/>
+                                            </Border>
+                                            <!-- End-->
+                                            <Border Classes="Cell"
+                                                IsVisible="{Binding HasEnd1}"
+                                                Grid.Row="6"
+                                                Grid.Column="5"
+                                                Grid.RowSpan="3">
+                                                <TextBlock Text="Final de turno" TextWrapping="Wrap"/>
+                                            </Border>
+
+                                        <!-- Value input fields -->
+                                            <!-- Start Value 01 -->
+                                            <Panel 
+                                                Height="45"
+                                                Grid.Row="0"
+                                                Grid.Column="6"
+                                                IsVisible="{Binding HasStart1}">
+                                                <Border Classes="Cell" IsVisible="{Binding IsCheckBox}" >
+                                                    <TextBox TextWrapping="Wrap"
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoStartPhase}">
+                                                        <TextBox.Text>
+                                                            <MultiBinding Converter="{StaticResource PropertyByNameConverter}"
+                                                                        Mode="TwoWay">
+                                                                <!-- Postmaquinado object -->
+                                                                <Binding Path="DataContext.Postmaquinado"
+                                                                        ElementName="PostmaqItems"/>
+
+                                                                <!-- Property name from DcpItem -->
+                                                                <Binding Path="StartProperty"/>
+                                                            </MultiBinding>
+                                                        </TextBox.Text>
+                                                    </TextBox>
+                                                </Border>
+
+                                                <Border Classes="Cell" IsVisible="True" >
+                                                    <CheckBox 
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoStartPhase}"
+                                                        Content="OK">
+                                                        <CheckBox.IsChecked>
+                                                            <MultiBinding Converter="{StaticResource PropertyByNameConverter}"
+                                                                        Mode="TwoWay">
+                                                                <!-- Postmaquinado object -->
+                                                                <Binding Path="DataContext.Postmaquinado"
+                                                                        ElementName="PostmaqItems"/>
+
+                                                                <!-- Property name from DcpItem -->
+                                                                <Binding Path="StartProperty"/>
+                                                            </MultiBinding>
+                                                        </CheckBox.IsChecked>
+                                                    </CheckBox>
+                                                </Border>
+                                            </Panel>
+
+                                            <!-- Mid Value 01-->                                          
+                                            <Panel 
+                                                Height="45"
+                                                Grid.Row="3"
+                                                Grid.Column="6"
+                                                IsVisible="{Binding HasMid1}">
+                                                <Border Classes="Cell" IsVisible="{Binding !IsCheckBox}" >
+                                                    <TextBox  Text="{Binding MidValue1}" 
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoMidPhase}"
+                                                        TextWrapping="Wrap"/>
+                                                </Border>
+
+                                                <Border Classes="Cell" IsVisible="{Binding IsCheckBox}" >
+                                                    <CheckBox IsChecked="{Binding MidValue1}" 
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoMidPhase}"
+                                                        Content="OK"/>
+                                                </Border>        
+                                            </Panel> 
+
+                                            <!-- End Value 01-->   
+                                            <Panel 
+                                                Height="45"
+                                                Grid.Row="6"
+                                                Grid.Column="6"
+                                                IsVisible="{Binding HasEnd1}">
+                                                <Border Classes="Cell" IsVisible="{Binding !IsCheckBox}" >
+                                                    <TextBox  Text="{Binding EndValue1}" 
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoEndPhase}"
+                                                        TextWrapping="Wrap"/>
+                                                </Border>
+
+                                                <Border Classes="Cell" IsVisible="{Binding IsCheckBox}" >
+                                                    <CheckBox IsChecked="{Binding EndValue1}"
+                                                        IsEnabled="{Binding $parent[ItemsControl].DataContext.PostmaquinadoEndPhase}"
+                                                        Content="OK"/>
+                                                </Border>                                           
+                                            </Panel>
+                                    </Grid>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+                <Button HorizontalAlignment="Center" Grid.Row="3" Padding="50 5" Grid.Column="0" Command="{Binding SavePostmaquinadoCommand}">
+                    <Label HorizontalAlignment="Center" FontSize="24">
+                        Guardar
+                    </Label>
+                </Button>
+            </Grid>
+        </TabItem>
+        
+    </TabControl>
+
+</UserControl> -->

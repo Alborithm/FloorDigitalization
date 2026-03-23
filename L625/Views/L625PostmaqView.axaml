@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:avalonia="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:FloorDigitalization.L625.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="600"
+        x:Class="FloorDigitalization.L625.Views.L625PostmaqView"
+        x:DataType="vm:L625PostmaqViewModel"
+        xmlns:dcp="using:FloorDigitalization.Helpers.Dcps"
+        >
+
+    <TabControl x:Name="MainTabControl" Margin="5">
+    </TabControl>
+
+</UserControl>

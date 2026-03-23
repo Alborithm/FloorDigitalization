@@ -1,0 +1,200 @@
+using System.ComponentModel.DataAnnotations;
+using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace FloorDigitalization.GenVMini.Models;
+
+public partial class Anillos : ObservableValidator
+{
+    // ------------------ DCP SN 01 -----------------
+    [ObservableProperty]
+    private bool _dcpSn01Start;
+    [ObservableProperty]
+    private bool _dcpSn01Mid;
+    // ------------------ DCP 133 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp133Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp133Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp133End;
+    // ------------------ DCP 134 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp134Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp134Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.15,.15, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp134End;
+    // ------------------ DCP 8 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_1Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_1Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_1End;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_2Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_2Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-.3,.3, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp8_2End;
+
+    // ------------------ DCP 11 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_1Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_1Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_1End;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_2Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_2Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.35, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp11_2End;
+
+    // ------------------ DCP 130 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp130Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp130Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp130End;
+
+    // ------------------ DCP 160 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp160Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp160Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp160End;
+
+    // ------------------ DCP 132 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_1Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_1Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_1End;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_2Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_2Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.05,0.05, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp132_2End;
+
+    // ------------------ DCP 10 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_1Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_1Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_1End;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_2Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_2Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_2End;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_3Start;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_3Mid;
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(-0.25,0.25, ErrorMessage = "Valor fuera de especificación ({0} a {1} mm)")]
+    private decimal? _dcp10_3End;
+
+    // ------------------ DCP 131 -----------------
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Range(0,0.1, ErrorMessage = "Valor fuera de especificación ({0} a {1})")]
+    private decimal? _dcp131Start;
+
+    // ------------------ DCP SN02 -----------------
+    [ObservableProperty]
+    private bool _dcpSn02Start;
+
+    // ------------------ DCP 77 161 -----------------
+    [ObservableProperty]
+    private bool _dcp77_161Start;
+    [ObservableProperty]
+    private bool _dcp77_161Mid;
+    [ObservableProperty]
+    private bool _dcp77_161End;
+}

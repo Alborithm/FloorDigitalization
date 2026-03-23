@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:avalonia="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:FloorDigitalization.ViewModels"
+        xmlns:view="using:FloorDigitalization.Views"
+        xmlns:local="using:FloorDigitalization"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="600"
+        x:Class="FloorDigitalization.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/report-icon.ico"
+        Title="FloorDigitalization">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid Margin="20, 10, 20, 10" RowDefinitions="Auto, *, Auto">
+        <!-- Header -->
+        <Border Grid.Row="0">
+        <Grid ColumnDefinitions= "Auto, *, Auto">
+            <Grid Grid.Column="0" ShowGridLines="False" Margin="5"
+                ColumnDefinitions="Auto, Auto, Auto"
+                RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0">Fecha:</Label>
+                <Label Grid.Row="0" Grid.Column="1" Content="{Binding Date}"></Label>
+                <Label Grid.Row="1" Grid.Column="0">Turno:</Label>
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding User.Shift}"></Label>
+                <!-- <Button Grid.Row="1" Grid.Column="2" Command="{Binding RefreshCommand}">Cambio de turno </Button> -->
+            </Grid>
+            <Image Grid.Column="2" Height="75" Margin="0,0,0,-10"
+                    Source="avares://FloorDigitalization/Assets/Images/muviq.webp"/>
+        </Grid>
+        </Border>
+        <!-- Main Content -->
+        <ContentControl Grid.Row="1" Content="{Binding CurrentPage}"/>
+        <!-- Footer -->
+        <Grid Grid.Row="2"
+            ColumnDefinitions="*,150">
+            <Border Grid.Column="0" Background="#1A1A1A" CornerRadius="5" >
+                <TextBlock FontSize="14">Captura los datos correspondientes al tiempo de registro y selecciona Registrar.</TextBlock>
+            </Border>
+            <TextBlock Grid.Column="1" FontSize="14" TextAlignment="Right" Margin="0,0,10,0" Text="{Binding Version}" />
+        </Grid>
+        
+    </Grid>
+
+</Window>

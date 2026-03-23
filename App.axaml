@@ -1,0 +1,203 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FloorDigitalization.App"
+             xmlns:local="using:FloorDigitalization"
+             RequestedThemeVariant="Dark"
+             >
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <!-- Brand collors -->
+    <!-- 
+        #09C149     MUVIQ Green
+        #7CD99E     Light Green
+        #EEF0F3     MUVIQ Letters
+        #B3B5B7     Disabled Text TBD
+        #78797B     Disabled Background TBD
+        #020202     MUVIQ Background
+        #191919     Not so Black color
+    -->
+  
+    <Application.Styles>
+        <FluentTheme />
+        <!-- 🔴 Highlight TextBoxes that fail validation -->
+        <!-- <Style Selector="TextBox">
+            <Setter Property="BorderBrush" Value="#E53935"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="#FFEBEE" />
+        </Style> -->
+
+        <Style Selector="ScrollViewer">
+            <Setter Property="AllowAutoHide" Value="False"/>
+        </Style>
+
+        <!-- Font Styles-->
+        <Style Selector="Label">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style Selector="CheckBox">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+
+        <!-- Button Styles -->
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#EEF0F3"/>
+            <Setter Property="Foreground" Value="#020202"/>
+            <Setter Property="CornerRadius" Value="16"/>
+        </Style>
+        <Style Selector="Button:disabled">
+            <Setter Property="Background" Value="#78797B"/>
+            <Setter Property="Foreground" Value="#B3B5B7"/>
+        </Style>
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#09C149"/>
+            <Setter Property="Foreground" Value="#020202"/>
+        </Style>
+
+        <!-- Grid Styles -->
+
+        <Style Selector="TextBlock.HeaderText">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Border.CellBorder">
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="6"/>
+        </Style>
+        
+        <Style Selector="Border.BorderDivider">
+            <Setter Property="Background" Value="#313131"/>
+        </Style>
+        
+        <Style Selector="TextBlock.CellTextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        
+        <Style Selector="Border.BorderDivider TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style Selector="TextBox:focus">
+            <Setter Property="BorderBrush" Value="Red"/>
+        </Style>
+
+        <!-- Data Validation Styles -->
+
+        <Style Selector="DataValidationErrors">
+            <Setter Property="Template">
+                <ControlTemplate>
+                <DockPanel LastChildFill="True">
+                    <ContentControl DockPanel.Dock="Right"
+                                    ContentTemplate="{TemplateBinding ErrorTemplate}"
+                                    DataContext="{TemplateBinding Owner}"
+                                    Content="{Binding (DataValidationErrors.Errors)}"
+                                    IsVisible="{Binding (DataValidationErrors.HasErrors)}"/>
+                    <ContentPresenter Name="PART_ContentPresenter"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="{TemplateBinding CornerRadius}"
+                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                    Content="{TemplateBinding Content}"
+                                    Padding="{TemplateBinding Padding}"/>
+                </DockPanel>
+                </ControlTemplate>
+            </Setter>
+            <Setter Property="ErrorTemplate">
+                <DataTemplate x:DataType="{x:Type x:Object}">
+                <Canvas Width="14" Height="14" Margin="4 0 1 0"
+                        Background="Transparent">
+                    <Canvas.Styles>
+                    <Style Selector="ToolTip">
+                        <Setter Property="Background" Value="#020202"/>
+                        <Setter Property="BorderBrush" Value="Red"/>
+                        <Setter Property="FontSize" Value="20"/>
+                    </Style>
+                    </Canvas.Styles>
+                    <ToolTip.Tip>
+                    <ItemsControl ItemsSource="{Binding}"/>
+                    </ToolTip.Tip>
+                    <Path Data="M14,7 A7,7 0 0,0 0,7 M0,7 A7,7 0 1,0 14,7 M7,3l0,5 M7,9l0,2"
+                        Stroke="Red"
+                        StrokeThickness="2"/>
+                </Canvas>
+                </DataTemplate>
+            </Setter>
+            </Style>
+            
+
+            
+            <Style Selector="Border.CellHeader">
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Padding" Value="6"/>
+            </Style>
+
+            <Style Selector="StackPanel.HeaderRow TextBlock">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Padding" Value="4"/>
+            </Style>
+
+            <Style Selector="Border.CellHeader TextBlock">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Padding" Value="4"/>
+            </Style>
+
+            <!-- Visibility for type of input, either check box or text box -->
+            <Style Selector="Border.isCheckBox">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+
+            <!-- NT styles-->
+            <Style Selector="TextBlock.ntblock">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Padding" Value="4" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+
+    </Application.Styles>
+
+    <!-- ✅ Resources go here, outside <Application.Styles> -->
+    <Application.Resources>
+        <!-- 🔴 Override validation colors -->
+        <!-- PRETTY SURE THIS IS NOT DOING ANYTHING -->
+        <SolidColorBrush x:Key="DataValidationErrorsBrush" Color="#E53935"/>
+        <SolidColorBrush x:Key="DataValidationErrorsInnerBrush" Color="#FFCDD2"/>
+
+        <!-- 🔴 Override the tooltip style by resource key -->
+        <!-- THIS IS NOT WORKING SO I PROBALBY WILL HAVE TO REMOVE IT OR INVESTIGATE FURTHER -->
+        <Style x:Key="ValidationToolTipStyle" Selector="ToolTip">
+            <Setter Property="Background" Value="#FFEBEE"/> <!-- light red -->
+            <Setter Property="BorderBrush" Value="#E53935"/> <!-- red -->
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#B71C1C"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="6"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Placement" Value="Right"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

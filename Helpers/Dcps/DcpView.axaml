@@ -1,0 +1,103 @@
+<UserControl x:Class="FloorDigitalization.Helpers.Dcps.DcpView"
+             xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="using:FloorDigitalization.Helpers.Dcps" xmlns:vm="using:FloorDigitalization.Helpers.Dcps"
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:CompileBindings="True" x:DataType="model:Dcp"
+             mc:Ignorable="d">
+    <Grid ColumnDefinitions="80, *, 150, 80, 200, 200" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+        <Border Grid.Column="0" Grid.RowSpan="9" Classes="Cell">
+            <TextBlock Text="{Binding Code}" />
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+            <TextBlock TextWrapping="Wrap">
+                <Run Text="{Binding Description}" />
+                <Run Text="{Binding BoldDescription}" FontWeight="Bold" />
+            </TextBlock>
+        </Border>
+
+        <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+            <TextBlock TextWrapping="Wrap" Text="{Binding Gage}"/>
+        </Border>
+
+        <Border Grid.Column="3" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+            <TextBlock Text="{Binding Sample}"/>
+        </Border>
+
+        <Border Grid.Column="4" Grid.Row="0" Grid.RowSpan="9" Classes="Cell">
+            <TextBlock Text="{Binding InspectFrequency}" TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- Frecuency-->
+            <!-- Start -->
+            <Border Classes="Cell"
+                IsVisible="{Binding HasStart}"
+                Grid.Row="0"
+                Grid.Column="5"
+                Grid.RowSpan="3">
+                <TextBlock Text="Inicio de turno" TextWrapping="Wrap"/>
+            </Border>
+            <!-- Mid -->
+            <Border Classes="Cell"
+                IsVisible="{Binding HasMid}"
+                Grid.Row="3"
+                Grid.Column="5"
+                Grid.RowSpan="3">
+                <TextBlock Text="Mitad de turno" TextWrapping="Wrap"/>
+            </Border>
+            <!-- End-->
+            <Border Classes="Cell"
+                IsVisible="{Binding HasEnd}"
+                Grid.Row="6"
+                Grid.Column="5"
+                Grid.RowSpan="3">
+                <TextBlock Text="Final de turno" TextWrapping="Wrap"/>
+            </Border>
+
+        <!-- This needs to go Away -->
+        <!-- Value input fields -->
+            <!-- Start Value 01 -->
+            <Panel 
+                Height="45"
+                Grid.Row="0"
+                Grid.Column="6"
+                IsVisible="{Binding HasStart}">
+                <Border Classes="Cell" IsVisible="{Binding !IsCheckBox}" >
+                    <!-- <TextBox TextWrapping="Wrap"
+                        IsEnabled="{Binding DataContext.BalanceoStartPhase, ElementName=ParentItemsControl}"
+                        Text="{Binding Start1}">
+                    </TextBox> -->
+                </Border>
+
+                <Border Classes="Cell" IsVisible="{Binding IsCheckBox}" >
+                    <!-- <CheckBox 
+                        IsEnabled="{Binding DataContext.BalanceoStartPhase, ElementName=ParentItemsControl}"
+                        Content="OK"
+                        IsChecked="{Binding Start1}">
+                    </CheckBox> -->
+                </Border>
+            </Panel>
+
+            <!-- Mid Value 01-->                                          
+            <Panel 
+                Height="45"
+                Grid.Row="3"
+                Grid.Column="6"
+                IsVisible="{Binding HasMid}">
+                <Border Classes="Cell" IsVisible="{Binding !IsCheckBox}" >
+                    <!-- <TextBox  Text="{Binding Start1}" 
+                        IsEnabled="{Binding DataContext.BalanceoMidPhase, ElementName=ParentItemsControl}"
+                        TextWrapping="Wrap"/> -->
+                </Border>
+
+                <Border Classes="Cell" IsVisible="{Binding IsCheckBox}" >
+                    <!-- <CheckBox IsChecked="{Binding Start1}" 
+                        IsEnabled="{Binding DataContext.BalanceoMidPhase, ElementName=ParentItemsControl}"
+                        Content="OK"/> -->
+                </Border>        
+            </Panel> 
+
+            
+    </Grid>
+</UserControl>
