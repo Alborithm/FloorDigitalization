@@ -9,15 +9,15 @@ using FloorDigitalization.Helpers.Views;
 
 namespace FloorDigitalization.Multilinea.Views;
 
-public partial class MultilineaCtsv10HView : UserControl
+public partial class MultilineaTruck10HView : UserControl
 {
-    public MultilineaCtsv10HView()
+    public MultilineaTruck10HView()
     {
         InitializeComponent();
-        DataContext = new MultilineaCtsv10HViewModel();
+        DataContext = new MultilineaTruck10HViewModel();
         var tabControl = this.FindControl<TabControl>("MainTabControl");
-        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("CTSV 010H", 
-            "Multilinea | CTSV | PTN-117 | 010H ",
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010H", 
+            "Multilinea | Truck | PTN-117 | 010H ",
             RecordNumber.First,
             DcpControlCreator.CreateGrid(op10w20wDcps, "First")));
     }

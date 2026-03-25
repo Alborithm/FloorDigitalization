@@ -6,7 +6,7 @@ using FloorDigitalization.Helpers;
 
 namespace FloorDigitalization.Multilinea.Models;
 
-public partial class Op10HCtsv : ObservableValidator
+public partial class Op10HTruck : ObservableValidator
 {
     // ----------- DCP SN -----------
     [ObservableProperty] private bool _dcpSnStart;

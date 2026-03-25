@@ -48,6 +48,7 @@ public enum ScreenNames
     Mazas127Pasillo,
     Muesca,
     MultilineaCtsv10H,
+    MultilineaTruck10H,
     Pintado,
     Pintura,
     Postmaquinado,

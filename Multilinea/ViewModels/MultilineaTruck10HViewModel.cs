@@ -6,9 +6,9 @@ using FloorDigitalization.Multilinea.Models;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaCtsv10HViewModel : QualityControlBaseViewModel<Op10HCtsv>
+public partial class MultilineaTruck10HViewModel : QualityControlBaseViewModel<Op10HTruck>
 {
-    public MultilineaCtsv10HViewModel() : base(
+    public MultilineaTruck10HViewModel() : base(
                                                     OperationNames.DebugPc, 
                                                     ScreenNames.MultilineaCtsv10H)
     {
