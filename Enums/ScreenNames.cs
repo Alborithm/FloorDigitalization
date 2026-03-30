@@ -49,6 +49,7 @@ public enum ScreenNames
     Muesca,
     MultilineaCtsv10H,
     MultilineaTruck10H,
+    MultilineaTruck20H,
     Pintado,
     Pintura,
     Postmaquinado,

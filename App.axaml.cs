@@ -62,7 +62,7 @@ public partial class App : Application
         collection.AddTransient<Dk68EpcViewModel>();
         collection.AddTransient<Duramax10w20w25wViewModel>();
         collection.AddTransient<Duramax30W40WViewModel>();
-        collection.AddTransient<MultilineaTruck10HViewModel>();
+        collection.AddTransient<MultilineaPC1ViewModel>();
 
         var services = collection.BuildServiceProvider();
 

@@ -5,8 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="3000"
-        x:Class="FloorDigitalization.Multilinea.Views.MultilineaTruck10HView"
-        x:DataType="vm:MultilineaTruck10HViewModel">
+        x:Class="FloorDigitalization.Multilinea.Views.MultilineaPC1View"
+        x:DataType="vm:MultilineaPC1ViewModel">
 
     <TabControl x:Name="MainTabControl" Margin="5">
     </TabControl>

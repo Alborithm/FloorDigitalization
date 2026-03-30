@@ -6,11 +6,13 @@ using FloorDigitalization.Multilinea.Models;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaTruck10HViewModel : QualityControlBaseViewModel<Op10HTruck>
+public partial class MultilineaPC1ViewModel : QualityControlBaseViewModel<Op10HTruck, Op20HTruck>
 {
-    public MultilineaTruck10HViewModel() : base(
+    // This is Mazas, Anillos, Ensamble
+    public MultilineaPC1ViewModel() : base(
                                                     OperationNames.DebugPc, 
-                                                    ScreenNames.MultilineaCtsv10H)
+                                                    ScreenNames.MultilineaTruck10H,
+                                                    ScreenNames.MultilineaTruck20H)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {
@@ -20,14 +22,14 @@ public partial class MultilineaTruck10HViewModel : QualityControlBaseViewModel<O
         {
             SaveFirstCommand.NotifyCanExecuteChanged();
         };
-        // SecondRecord.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveSecondCommand.NotifyCanExecuteChanged();
-        // };
-        // SecondUser.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveSecondCommand.NotifyCanExecuteChanged();
-        // };
+        SecondRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveSecondCommand.NotifyCanExecuteChanged();
+        };
+        SecondUser.PropertyChanged += (sender, e) =>
+        {
+            SaveSecondCommand.NotifyCanExecuteChanged();
+        };
         // ThirdRecord.PropertyChanged += (sender, e) =>
         // {
         //     SaveThirdCommand.NotifyCanExecuteChanged();
