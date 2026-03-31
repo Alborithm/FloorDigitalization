@@ -31,7 +31,7 @@ public static class CsvOperatorReader
         }
         catch (System.Exception)
         {
-            return output = "Falla de red";
+            return output = "Falla de red - Puedes continuar, intenta nuevamente más tarde";
         }
 
 
