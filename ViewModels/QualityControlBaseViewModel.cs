@@ -149,7 +149,7 @@ public partial class QualityControlBaseViewModel<T1> : ViewModelBase
         {
             string shiftPhase = _shiftPhase == ShiftPhase.Start ? "Start" : _shiftPhase == ShiftPhase.Mid ? "Mid" : "End";
             Log.Error("Unable to save Inspeccion to OneDrive at Date: {Date}, Shift:{Shift}, Phase: {Phase}", _user.Date, _user.Shift, shiftPhase);
-            throw;
+            // throw;
         }
         
     }
