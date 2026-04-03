@@ -106,6 +106,7 @@ public static class MyCsvHelper
         new() { BaseName = "Dcp15",           StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
         new() { BaseName = "Dcp34_V_1",       StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
         new() { BaseName = "Dcp34_V_2",       StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
+        new() { BaseName = "Dcp34_V_3",       StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
         new() { BaseName = "Dcp34_A",         StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
         new() { BaseName = "Dcp136",          StartHasValue = true, MidHasValue = true,   EndHasValue = true  },
         new() { BaseName = "DcpSn19",         StartHasValue = true, MidHasValue = true,   EndHasValue = true  },

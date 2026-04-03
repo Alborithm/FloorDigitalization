@@ -134,6 +134,20 @@ public partial class Postmaquinado : ObservableValidator
     [Range(33.0175, 33.0425, ErrorMessage = "Valor entre 33.0175 y 33.0425")]
     private decimal? _dcp34_V_2End;
 
+    // --------------------- DCP 34 V3 -------------------
+
+    [ObservableProperty, NotifyDataErrorInfo]
+    [Range(33.0175, 33.0425, ErrorMessage = "Valor entre 33.0175 y 33.0425")]
+    private decimal? _dcp34_V_3Start;
+
+    [ObservableProperty, NotifyDataErrorInfo]
+    [Range(33.0175, 33.0425, ErrorMessage = "Valor entre 33.0175 y 33.0425")]
+    private decimal? _dcp34_V_3Mid;
+
+    [ObservableProperty, NotifyDataErrorInfo]
+    [Range(33.0175, 33.0425, ErrorMessage = "Valor entre 33.0175 y 33.0425")]
+    private decimal? _dcp34_V_3End;
+
     // --------------------- DCP 34 A -------------------
 
     [ObservableProperty] private bool _dcp34_AStart;

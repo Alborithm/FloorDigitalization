@@ -203,7 +203,7 @@ public partial class L625PostmaqView : UserControl
             InspectFrequency = "Cada 15 piezas",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp34_V", inputPerTurn: 2, start: true, mid: true, end: true)
+        new Dcp(code: "Dcp34_V", inputPerTurn: 3, start: true, mid: true, end: true)
         {
             Code = "34V",
             Description = "Diametro interior ",
@@ -300,7 +300,7 @@ public partial class L625PostmaqView : UserControl
         new Dcp(code: "DcpSn22", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "SN\n22",
-            Description = "Verificar la presencia de bruñido en diametro exterior",
+            Description = "Verificar la presencia de pulido en diametro exterior",
             Gage = "Visual",
             Sample = "1",
             InspectFrequency = "100%",
