@@ -56,7 +56,7 @@ public partial class L625BalanceoInspeccionView : UserControl
         {
             Code = "33",
             Description = "Localización de barrenos de balanceo R 80.6 ± 1.0 mm",
-            Gage = "G-1015-19",
+            Gage = "G-1015-21",
             Sample = "1",
             InspectFrequency = "Inicio de turno",
             IsCheckBox = true,

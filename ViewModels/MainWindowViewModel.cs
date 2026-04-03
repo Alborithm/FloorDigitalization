@@ -87,7 +87,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        L625PostmaqViewModel viewModel
+        L625BalanceoInspeccionViewModel viewModel
         )
     {
         CurrentPage = viewModel;
