@@ -142,7 +142,7 @@ public partial class GenVPrincipalAnillosView : UserControl
         {
             Code = "SN",
             Description = "Verificación de poka yoke de presencia de ranuras",
-            Gage = "PY",
+            Gage = "PY-209",
             Sample = "1",
             InspectFrequency = "Inicio de turno",
             IsCheckBox = true,

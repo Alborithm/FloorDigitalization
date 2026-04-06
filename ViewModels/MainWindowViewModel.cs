@@ -87,7 +87,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        L625BalanceoInspeccionViewModel viewModel
+        GenVPrincipalAnillosViewModel viewModel
         )
     {
         CurrentPage = viewModel;
