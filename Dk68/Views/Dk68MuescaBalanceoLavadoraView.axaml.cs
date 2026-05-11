@@ -48,7 +48,7 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
             Code = "50",
             Description = "DISTANCIA ",
             BoldDescription = "2+/-0.5",
-            Gage = "CMM-001",
+            Gage = "VCSN-001",
             Sample = "1",
             InspectFrequency = "INICIO DE TURNO",
             IsCheckBox = false,
@@ -66,7 +66,7 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
         new Dcp(code: "Dcp55",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "55",
-            Description = "ANCHO DE LA MUESCA 1.5+/-.25",
+            Description = "ANCHO DE LA MUESCA 1.5+/-.3",
             Gage = "G-1021-05",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS",

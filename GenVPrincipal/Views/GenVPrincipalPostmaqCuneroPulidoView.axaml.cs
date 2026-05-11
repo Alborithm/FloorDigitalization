@@ -56,7 +56,7 @@ public partial class GenVPrincipalPostmaqCuneroPulidoView : UserControl
         {
             Code = "2",
             Description = "RUN OUT AXIAL en 3ra ranura (maquinado de 6 ranuras) ",
-            BoldDescription = "± .250 mm",
+            BoldDescription = ".25 mm",
             Gage = "20 ►◄",
             Sample = "1",
             InspectFrequency = "100 %",
@@ -226,7 +226,7 @@ public partial class GenVPrincipalPostmaqCuneroPulidoView : UserControl
         new Dcp(code: "Dcp47", inputPerTurn:1, start: true, mid: true, end: true)
         {
             Code = "47",
-            Description = "Ancho de cuñero 4.89 ± 0.03 mm",
+            Description = "Ancho de cuñero 4.83 ± 0.3 mm",
             Gage = "32",
             Sample = "1",
             InspectFrequency = "Cada 60 piezas",
@@ -266,7 +266,7 @@ public partial class GenVPrincipalPostmaqCuneroPulidoView : UserControl
         new Dcp(code: "Dcp36a", inputPerTurn:1, start: true, mid: true, end: true)
         {
             Code = "36A",
-            Description = "Diametro interior MIN 37.600 - MAX 37.625",
+            Description = "Diametro interior MIN 37.600 - MAX 37.625\n ►◄",
             Gage = "36",
             Sample = "1",
             InspectFrequency = "100%",
@@ -276,7 +276,7 @@ public partial class GenVPrincipalPostmaqCuneroPulidoView : UserControl
         {
             Code = "36B",
             Description = "Diametro interior ",
-            BoldDescription = "MIN 37.600 - MAX 37.625",
+            BoldDescription = "MIN 37.600 - MAX 37.625 \n ►◄",
             Gage = "38",
             Sample = "1",
             InspectFrequency = "Cada 10 piezas",
