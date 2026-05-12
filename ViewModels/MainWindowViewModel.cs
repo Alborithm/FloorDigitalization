@@ -87,7 +87,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        Dk68EpcViewModel viewModel
+        Dk68PintadoEstampadoInspeccionViewModel viewModel
         )
     {
         CurrentPage = viewModel;

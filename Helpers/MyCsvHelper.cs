@@ -567,12 +567,12 @@ public static class MyCsvHelper
         new() { BaseName = "Dcp66",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp148",            StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp65",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
-        new() { BaseName = "DcpSn",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
+        new() { BaseName = "DcpSn31",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "DcpSn28",           StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp80",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp72",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp44",             StartHasValue = true, MidHasValue = true,   EndHasValue = true },
-        new() { BaseName = "DcpSn2_28",         StartHasValue = true, MidHasValue = true,   EndHasValue = true },
+        new() { BaseName = "DcpSn29",         StartHasValue = true, MidHasValue = true,   EndHasValue = true },
         new() { BaseName = "Dcp30",             StartHasValue = true, MidHasValue = false,   EndHasValue = false },
     };
     private static readonly List<PhaseFieldMap> _fieldMapsDk68Epc = new()

@@ -53,13 +53,13 @@ public partial class Inspeccion : ObservableValidator
     [ObservableProperty]
     private bool _dcp65End;
 
-    // ----------- DCP SN -----------
+    // ----------- DCP SN 31 -----------
     [ObservableProperty]
-    private bool _dcpSnStart;
+    private bool _dcpSn31Start;
     [ObservableProperty]
-    private bool _dcpSnMid;
+    private bool _dcpSn31Mid;
     [ObservableProperty]
-    private bool _dcpSnEnd;
+    private bool _dcpSn31End;
 
     // ----------- DCP SN 28 -----------
     [ObservableProperty]
@@ -93,13 +93,13 @@ public partial class Inspeccion : ObservableValidator
     [ObservableProperty]
     private bool _dcp44End;
 
-    // ----------- DCP SN2 9 -----------
+    // ----------- DCP SN 29 -----------
     [ObservableProperty]
-    private bool _dcpSn2_9Start;
+    private bool _dcpSn29Start;
     [ObservableProperty]
-    private bool _dcpSn2_9Mid;
+    private bool _dcpSn29Mid;
     [ObservableProperty]
-    private bool _dcpSn2_9End;
+    private bool _dcpSn29End;
 
     // ----------- DCP 30 -----------
     [ObservableProperty]

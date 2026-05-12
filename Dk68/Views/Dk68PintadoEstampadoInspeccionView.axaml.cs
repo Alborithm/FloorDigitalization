@@ -203,7 +203,7 @@ NUMERO DE PARTE: 12723441",
             InspectFrequency = "100%",
             IsCheckBox = true,
         },
-        new Dcp(code: "DcpSn",inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "DcpSn31",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "SN\n31",
             Description = "PRESENCIA DE MUESCA",
@@ -248,7 +248,7 @@ NUMERO DE PARTE: 12723441",
             InspectFrequency = "100%",
             IsCheckBox = true,
         },
-        new Dcp(code: "DcpSn2_9",inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "DcpSn29",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "SN\n29",
             Description = "POSICION DEL ESTAMPADO\n90°",
