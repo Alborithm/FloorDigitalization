@@ -49,13 +49,13 @@ public partial class Dk68PintadoEstampadoInspeccionView : UserControl
             Description = "BARRENOS DE BALANCEO Y MUESCA DE TIEMPO PUEDEN IR PARCIALMENTE PINTADOS ",
             Gage = "VISUAL",
             Sample = "1",
-            InspectFrequency = "INICIO, MITAD  Y FINAL DE TURNO",
+            InspectFrequency = "100%",
             IsCheckBox = true,
         },
         new Dcp(code: "DcpSn27", inputPerTurn: 1, start: true, mid: false, end: false)
         {
             Code = "SN\n27",
-            Description = "VISCOSIDAD",
+            Description = "VISCOSIDAD ",
             BoldDescription = "32 - 38 SEC.",
             Gage = "ZAHN (LAB)",
             Sample = "1",
@@ -65,7 +65,7 @@ public partial class Dk68PintadoEstampadoInspeccionView : UserControl
         new Dcp(code: "Dcp65", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "65",
-            Description = "NO SE PERMITE PINTURA EN ESTA ZONA (Zonas maquinadas) RANURAS COMPLETAMENTE PINTADAS",
+            Description = "NO SE PERMITE PINTURA EN ESTA ZONA (Barrenos, Diametro interior y back face ) RANURAS COMPLETAMENTE PINTADAS ",
             Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
@@ -87,7 +87,7 @@ FECHA JULIANA: XXX
 CODIGO DE LINEA: 8
 SECUENCIA: 0001 
 NUMERO DE PARTE: 12723441",
-            Gage = "LECTOR 2D",
+            Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
             IsCheckBox = true,
@@ -105,7 +105,7 @@ NUMERO DE PARTE: 12723441",
         {
             Code = "53",
             Description = "DISTANCIA 5.7",
-            Gage = "PLANTILLA",
+            Gage = "G-1021-08",
             Sample = "1",
             InspectFrequency = "INICIO DE TURNO",
             IsCheckBox = true,
@@ -114,7 +114,7 @@ NUMERO DE PARTE: 12723441",
         {
             Code = "58",
             Description = "DISTANCIA SEGÚN LA MEDIA DEL CENTRO DE LA PIEZA\n20",
-            Gage = "PLANTILLA",
+            Gage = "G-1021-08",
             Sample = "1",
             InspectFrequency = "INICIO DE TURNO",
             IsCheckBox = true,
@@ -123,7 +123,7 @@ NUMERO DE PARTE: 12723441",
         {
             Code = "57",
             Description = "ANCHO 6.08",
-            Gage = "PLANTILLA",
+            Gage = "G-1021-08",
             Sample = "1",
             InspectFrequency = "INICIO DE TURNO",
             IsCheckBox = true,
@@ -131,7 +131,7 @@ NUMERO DE PARTE: 12723441",
         new Dcp(code: "DcpSn2_9",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "SN2\n9",
-            Description = "POSICION DEL ESTAMPADO 90°",
+            Description = "POSICION DEL ESTAMPADO Y FLECHA",
             Gage = "VISUAL\nAYUDA VISUAL 1229",
             Sample = "1",
             InspectFrequency = "100%",
@@ -197,7 +197,7 @@ NUMERO DE PARTE: 12723441",
         new Dcp(code: "Dcp65",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "65",
-            Description = "NO SE PERMITE PINTURA EN ESTA ZONA (Zonas maquinadas) RANURAS COMPLETAMENTE PINTADAS",
+            Description = "NO SE PERMITE PINTURA EN ESTA ZONA (Barrenos, Diametro interior y back face ) RANURAS COMPLETAMENTE PINTADAS ",
             Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
@@ -205,7 +205,7 @@ NUMERO DE PARTE: 12723441",
         },
         new Dcp(code: "DcpSn",inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "SN",
+            Code = "SN\n31",
             Description = "PRESENCIA DE MUESCA",
             Gage = "VISUAL",
             Sample = "1",
@@ -250,7 +250,7 @@ NUMERO DE PARTE: 12723441",
         },
         new Dcp(code: "DcpSn2_9",inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "SN2\n9",
+            Code = "SN\n29",
             Description = "POSICION DEL ESTAMPADO\n90°",
             Gage = "VISUAL\nAYUDA VISUAL 1229",
             Sample = "1",

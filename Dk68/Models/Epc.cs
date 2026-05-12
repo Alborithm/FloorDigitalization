@@ -21,29 +21,46 @@ public partial class Epc : ObservableValidator
     [ObservableProperty]
     private bool _dcp73End;
     
+    // Not required according to update from ana on April 2026
     // ----------- DCP 68 -----------
-    [ObservableProperty]
-    private bool _dcp68Start;
-    [ObservableProperty]
-    private bool _dcp68Mid;
-    [ObservableProperty]
-    private bool _dcp68End;
+    // [ObservableProperty]
+    // private bool _dcp68Start;
+    // [ObservableProperty]
+    // private bool _dcp68Mid;
+    // [ObservableProperty]
+    // private bool _dcp68End;
 
-    // ----------- DCP 82 -----------
+    // ----------- DCP 80 -----------
     [ObservableProperty]
-    private bool _dcp82Start;
+    private bool _dcp80Start;
     [ObservableProperty]
-    private bool _dcp82Mid;
+    private bool _dcp80Mid;
     [ObservableProperty]
-    private bool _dcp82End;
+    private bool _dcp80End;
 
-    // ----------- DCP SN -----------
+    // ----------- DCP SN 31 -----------
     [ObservableProperty]
-    private bool _dcpSnStart;
+    private bool _dcpSn31Start;
     [ObservableProperty]
-    private bool _dcpSnMid;
+    private bool _dcpSn31Mid;
     [ObservableProperty]
-    private bool _dcpSnEnd;
+    private bool _dcpSn31End;
+
+    // ----------- DCP 71 -----------
+    [ObservableProperty]
+    private bool _dcp71Start;
+    [ObservableProperty]
+    private bool _dcp71Mid;
+    [ObservableProperty]
+    private bool _dcp71End;
+
+    // ----------- DCP 148 -----------
+    [ObservableProperty]
+    private bool _dcp148Start;
+    [ObservableProperty]
+    private bool _dcp148Mid;
+    [ObservableProperty]
+    private bool _dcp148End;
 
     // ----------- DCP SN 28 -----------
     [ObservableProperty]

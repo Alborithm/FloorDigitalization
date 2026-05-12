@@ -37,7 +37,7 @@ FECHA JULIANA: XXX
 CODIGO DE LINEA: 8
 SECUENCIA: 0001 
 NUMERO DE PARTE: 12723441",
-            Gage = "LECTOR 2D",
+            Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
             IsCheckBox = true,
@@ -51,28 +51,46 @@ NUMERO DE PARTE: 12723441",
             InspectFrequency = "100%",
             IsCheckBox = true,
         },
-        new Dcp(code: "Dcp68",inputPerTurn: 1, start: true, mid: true, end: true)
+        // new Dcp(code: "Dcp68",inputPerTurn: 1, start: true, mid: true, end: true)
+        // {
+        //     Code = "68",
+        //     Description = "NO SE PERMITE PINTURA EN AREAS MAQUINADAS, LOS BARRENOS DE BALANCEO Y LA MUESCA DE TIEMPO PUEDEN IR PARCIALMENTE PINTADA",
+        //     Gage = "VISUAL",
+        //     Sample = "1",
+        //     InspectFrequency = "100%",
+        //     IsCheckBox = true,
+        // },
+        new Dcp(code: "Dcp80",inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "68",
-            Description = "NO SE PERMITE PINTURA EN AREAS MAQUINADAS, LOS BARRENOS DE BALANCEO Y LA MUESCA DE TIEMPO PUEDEN IR PARCIALMENTE PINTADA",
-            Gage = "VISUAL",
-            Sample = "1",
-            InspectFrequency = "100%",
-            IsCheckBox = true,
-        },
-        new Dcp(code: "Dcp82",inputPerTurn: 1, start: true, mid: true, end: true)
-        {
-            Code = "82",
+            Code = "80",
             Description = "LA PIEZA DEBE DE IR LIBRE DE REBABA, FILOS QUE PUEDAN DETRIMENTAR EL ENSAMBLE SATISFACTORIO, EL MANEJO SEGURO O LA FUNCION DE LA PARTE",
             Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
             IsCheckBox = true,
         },
-        new Dcp(code: "DcpSn",inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "DcpSn31",inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "SN",
+            Code = "SN\n31",
             Description = "PRESENCIA DE MUESCA",
+            Gage = "VISUAL",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp71",inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "71",
+            Description = "FECHA JULIANA EN ESTAMPADO DE LA CARA DEL BACK FACE",
+            Gage = "VISUAL",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp148",inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "148",
+            Description = "LA PIEZA DEBE DE IR LIBRE DE REBABA, FILOS QUE PUEDAN DETRIMENTAR EL ENSAMBLE SATISFACTORIO, EL MANEJO SEGURO O LA FUNCION DE LA PARTE",
             Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",

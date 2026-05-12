@@ -88,7 +88,7 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
         new Dcp(code: "Dcp2_2",inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "2",
-            Description = "PROFUNDIDAD 8 MAX ",
+            Description = "PROFUNDIDAD 8 MAX \n\n Nota: barrenos de balanceo en muesca de tiempo son aceptados",
             Gage = "G-1021-03",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS",
@@ -100,7 +100,7 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
             Description = "LOCALIZACION DE BARRENOS DE BALANCEO 14+/-1 ",
             Gage = "G-1021-02",
             Sample = "1",
-            InspectFrequency = "INICIO DE TURNO",
+            InspectFrequency = "CADA 10 PIEZAS",
             IsCheckBox = true,
         },
         new Dcp(code: "Dcp3",inputPerTurn: 1, start: true, mid: true, end: false)
@@ -110,7 +110,7 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
             BoldDescription = "3 MIN",
             Gage = "VERNIER",
             Sample = "1",
-            InspectFrequency = "CADA HORA",
+            InspectFrequency = "CADA 10 PIEZAS",
             IsCheckBox = false,
         },
         new Dcp(code: "DcpSn28",inputPerTurn: 1, start: true, mid: true, end: true)
@@ -127,9 +127,9 @@ public partial class Dk68MuescaBalanceoLavadoraView : UserControl
             Code = "16",
             Description = "EL DAMPER ENSAMBLADO DEBERA ESTAR EN BALANCEO ESTATICO 74.35 KG*MM ",
             BoldDescription = "+/- 0.18 KG*MM",
-            Gage = "PBL-023",
+            Gage = "PLC CONTROL",
             Sample = "1",
-            InspectFrequency = "INICIO Y MITAD DE TURNO",
+            InspectFrequency = "100%",
             IsCheckBox = false,
         },
     };

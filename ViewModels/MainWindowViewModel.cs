@@ -87,7 +87,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        GenVPrincipalPostmaqCuneroPulidoViewModel viewModel
+        Dk68EpcViewModel viewModel
         )
     {
         CurrentPage = viewModel;
