@@ -38,7 +38,7 @@ public partial class MultilineaPC1View : UserControl
 
     private List<Dcp> op10hDcps = new List<Dcp>()
     {
-        new Dcp(code: "DcpSn", inputPerTurn: 1, start: true, mid: false, end: false)
+        new Dcp(code: "DcpSn", inputPerTurn: 1, start: true, mid: true, end: false)
         {
             Code = "SN",
             Description = "CALIBRAR LOS GAGES ",
@@ -47,86 +47,64 @@ public partial class MultilineaPC1View : UserControl
             InspectFrequency = "INICIO DE TURNO ",
             IsCheckBox = true,
         },
-        new Dcp(code: "Dcp1Ip1", inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "Dcp57Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "1IP",
-            Description = "DISTANCIA A LAS RANURAS 16.87 ",
-            BoldDescription = "± 0.15 ",
-            PostDescription = "\nCARA#1",
-            Gage = "G-1005-20",
+            Code = "57IP",
+            Description = "Diametro exterior de mamelon 55.6 ",
+            BoldDescription = "± 0.2 mm ",
+            Gage = "G-1004-25",
             Sample = "1",
-            InspectFrequency = "CADA 10",
+            InspectFrequency = "Cada 10 piezas",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp1Ip2", inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "Dcp87Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "1IP",
-            Description = "DISTANCIA A LAS RANURAS 16.87 ",
-            BoldDescription = "± 0.15 ",
-            PostDescription = "\nCARA#2",
-            Gage = "G-1005-20",
+            Code = "87IP",
+            Description = "Diametro interior 36.10 ± 0.15 mm",
+            Gage = "G-1020-03",
             Sample = "1",
-            InspectFrequency = "CADA 10",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp6", inputPerTurn: 2, start: true, mid: true, end: true)
-        {
-            Code = "6",
-            Description = "DIAMETRO EXTERIOR DE LA CARA DEL ANILLO Ø 185.9 ",
-            BoldDescription = "± 0.25 ",
-            Gage = "G-1005-02",
-            Sample = "1",
-            InspectFrequency = "CADA 10",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp7", inputPerTurn: 1, start: true, mid: true, end: true)
-        {
-            Code = "7",
-            Description = "DIAMETRO EXTERIOR DE RANURAS Ø 180.99 ",
-            BoldDescription = "± 0.4 ",
-            Gage = "G-1005-13",
-            Sample = "1",
-            InspectFrequency = "CADA 10",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp94", inputPerTurn: 1, start: true, mid: false, end: false)
-        {
-            Code = "94",
-            Description = "PERFIL ",
-            BoldDescription = "⌓ | 0.6 | E | F ",
-            Gage = "G-1005-21",
-            Sample = "1",
-            InspectFrequency = "INICIO DE TURNO",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp101", inputPerTurn: 1, start: true, mid: true, end: true)
-        {
-            Code = "101",
-            Description = "ALTURA TOTAL 37.3 ",
-            BoldDescription = "± 0.20",
-            Gage = "G-1005-02",
-            Sample = "1",
-            InspectFrequency = "CADA 10",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp102Ip", inputPerTurn: 1, start: true, mid: true, end: true)
-        {
-            Code = "102IP",
-            Description = "PARALELISMO ",
-            BoldDescription = "// | 0.1 | E | F",
-            Gage = "G-1005-02",
-            Sample = "1",
-            InspectFrequency = "CADA 10",
-            IsCheckBox = false,
-        },
-        new Dcp(code: "Dcp60", inputPerTurn: 1, start: true, mid: true, end: true)
-        {
-            Code = "60",
-            Description = "SIN BORDES AFILADOS ENTRE LOS PUNTOS J Y K ",
-            Gage = "VISUAL",
-            Sample = "1",
-            InspectFrequency = "INSPECCIÓN AL 100%",
+            InspectFrequency = "Cada 10 piezas",
             IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp119", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "119",
+            Description = "Diametro exterior 2x 157.00 ",
+            BoldDescription = "± 0.10 mm ",
+            Gage = "G-1020-01-A",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp66Ip", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "66IP",
+            Description = "Altura back face a mamelon ",
+            BoldDescription = "38.29 ± 0.40 mm",
+            Gage = "G-6397-13",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp95Ip", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "95IP",
+            Description = "Altura ",
+            BoldDescription = "22.75 ± 0.25 mm ",
+            Gage = "G-6397-13",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp96Ip", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "96IP",
+            Description = "Altura ",
+            BoldDescription = "25.35 ± 0.25 mm",
+            Gage = "G-6397-13",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
         },
     };
 
