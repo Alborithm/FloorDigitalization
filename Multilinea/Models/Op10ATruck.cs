@@ -36,4 +36,15 @@ public partial class Op10ATruck : ObservableValidator
     [ObservableProperty] private bool _dcp34Start;
     [ObservableProperty] private bool _dcp34Mid;
     [ObservableProperty] private bool _dcp34End;
+    
+    public static List<PhaseFieldMap> FieldMaps()
+    {
+        return new List<PhaseFieldMap>
+        {
+            new("Dcp22", start: true, mid: true, end: true),
+            new("DcpSn33", start: true, mid: true, end: true),
+            new("Dcp23", start: true, mid: true, end: true),
+            new("Dcp34", start: true, mid: true, end: true),
+        };
+    }
 }

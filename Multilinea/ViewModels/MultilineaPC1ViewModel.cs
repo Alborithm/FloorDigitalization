@@ -6,13 +6,16 @@ using FloorDigitalization.Multilinea.Models;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaPC1ViewModel : QualityControlBaseViewModel<Op10HTruck, Op20HTruck>
+public partial class MultilineaPC1ViewModel : QualityControlBaseViewModel<Op10HTruck, Op20HTruck, Op10WTruck, Op20WTruck, Op10ATruck>
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC1ViewModel() : base(
                                                     OperationNames.DebugPc, 
                                                     ScreenNames.MultilineaTruck10H,
-                                                    ScreenNames.MultilineaTruck20H)
+                                                    ScreenNames.MultilineaTruck20H,
+                                                    ScreenNames.MultilineaTruck10W,
+                                                    ScreenNames.MultilineaTruck20W,
+                                                    ScreenNames.MultilineaTruck10A)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {
@@ -30,13 +33,29 @@ public partial class MultilineaPC1ViewModel : QualityControlBaseViewModel<Op10HT
         {
             SaveSecondCommand.NotifyCanExecuteChanged();
         };
-        // ThirdRecord.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveThirdCommand.NotifyCanExecuteChanged();
-        // };
-        // ThirdUser.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveThirdCommand.NotifyCanExecuteChanged();
-        // };
+        ThirdRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveThirdCommand.NotifyCanExecuteChanged();
+        };
+        ThirdUser.PropertyChanged += (sender, e) =>
+        {
+            SaveThirdCommand.NotifyCanExecuteChanged();
+        };
+        ForthRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveForthCommand.NotifyCanExecuteChanged();
+        };
+        ForthUser.PropertyChanged += (sender, e) =>
+        {
+            SaveForthCommand.NotifyCanExecuteChanged();
+        };
+        FifthRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveFifthCommand.NotifyCanExecuteChanged();
+        };
+        FifthUser.PropertyChanged += (sender, e) =>
+        {
+            SaveFifthCommand.NotifyCanExecuteChanged();
+        };
     }
 }

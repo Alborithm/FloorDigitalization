@@ -33,4 +33,14 @@ public partial class Op10WTruck : ObservableValidator
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcpSn81LowerLimit, dcpSn81UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcpSn81Start;
+
+    public static List<PhaseFieldMap> FieldMaps()
+    {
+        return new List<PhaseFieldMap>
+        {
+            new("DcpSn", start: true, mid: true, end: false),
+            new("DcpSn20", start: true, mid: true, end: true),
+            new("DcpSn81", start: true, mid: false, end: false),
+        };
+    }
 }
