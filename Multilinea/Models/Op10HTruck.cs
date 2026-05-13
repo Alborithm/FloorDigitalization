@@ -13,8 +13,8 @@ public partial class Op10HTruck : ObservableValidator
     [ObservableProperty] private bool _dcpSnMid;
 
     // ----------- DCP 57 IP -----------
-    private const double dcp57IpLowerLimit = -.15;
-    private const double dcp57IpUpperLimit = .15;
+    private const double dcp57IpLowerLimit = -.2;
+    private const double dcp57IpUpperLimit = .2;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp57IpLowerLimit, dcp57IpUpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
