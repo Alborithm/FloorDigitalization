@@ -682,6 +682,11 @@ public static class MyCsvHelper
         else if (objType == typeof(Duramax.Models.Op30WCara1)) _fieldMaps = Duramax.Models.Op30WCara1.FieldMaps();
         else if (objType == typeof(Duramax.Models.Op30WCara2)) _fieldMaps = Duramax.Models.Op30WCara2.FieldMaps();
         else if (objType == typeof(Duramax.Models.Balanceo40W)) _fieldMaps = Duramax.Models.Balanceo40W.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Op10ATruck)) _fieldMaps = Multilinea.Models.Op10ATruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Op10HTruck)) _fieldMaps = Multilinea.Models.Op10HTruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Op20HTruck)) _fieldMaps = Multilinea.Models.Op20HTruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Op10WTruck)) _fieldMaps = Multilinea.Models.Op10WTruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Op20WTruck)) _fieldMaps = Multilinea.Models.Op20WTruck.FieldMaps();
         else throw new NotImplementedException();
 
         // Dynamic DCP fields

@@ -27,11 +27,15 @@ public partial class MultilineaPC1View : UserControl
         tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010W", 
             "Multilinea | Truck | PTN-117 | 010W ",
             RecordNumber.Third,
-            DcpControlCreator.CreateGrid(op10wDcps, "Second")));
+            DcpControlCreator.CreateGrid(op10wDcps, "Third")));
         tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 020W", 
             "Multilinea | Truck | PTN-117 | 020W ",
             RecordNumber.Forth,
-            DcpControlCreator.CreateGrid(op20wDcps, "Second")));
+            DcpControlCreator.CreateGrid(op20wDcps, "Forth")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010A", 
+            "Multilinea | Truck | PPE-037 | 010A ",
+            RecordNumber.Fifth,
+            DcpControlCreator.CreateGrid(op10aDcps, "Fifth")));
     }
 
     // TODO replace with the Multilinea 10H CTSV Data
@@ -318,4 +322,44 @@ public partial class MultilineaPC1View : UserControl
         },
     };
 
+    private List<Dcp> op10aDcps = new List<Dcp>()
+    {
+        new Dcp(code: "Dcp22", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "22",
+            Description = "El hule no puede sobresalir mas de 2 mm ni estar empotrado mas de 2 mm de las superficies metalicas adyacentes. ",
+            Gage = "Visual\nEn caso de duda usar gage G-6400-20",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "DcpSn33", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "SN33",
+            Description = "Altura 98.805",
+            BoldDescription = "± 0.4",
+            Gage = "G-1012-25-2",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp23", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "23",
+            Description = "No se permite porosidad visual en el diametro del sello. el área de las ranuras y el diámetro interno\n la porosidad es permisible en otras superficies mecanizadas si menos de Ø1.5 mm y menos de 1.0 mm de profuncidad",
+            Gage = "Visual\nPara verificar piezas usar la plantilla F-2133-D",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp34", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "34",
+            Description = "Las rebabas, los bordes afilados y los materiales extraños resultantes de las buenas prácticas de fabricación son aceptables siempre que no sean prejuicios para el funcionamiento del ensamblaje o la manipulación segura según lo determine la ingeniería del motor",
+            Gage = "Visual",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+    };
 }
