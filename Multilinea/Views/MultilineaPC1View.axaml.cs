@@ -24,6 +24,14 @@ public partial class MultilineaPC1View : UserControl
             "Multilinea | Truck | PTN-107 | 020H ",
             RecordNumber.Second,
             DcpControlCreator.CreateGrid(op20hDcps, "Second")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010W", 
+            "Multilinea | Truck | PTN-117 | 010W ",
+            RecordNumber.Third,
+            DcpControlCreator.CreateGrid(op10wDcps, "Second")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 020W", 
+            "Multilinea | Truck | PTN-117 | 020W ",
+            RecordNumber.Forth,
+            DcpControlCreator.CreateGrid(op20wDcps, "Second")));
     }
 
     // TODO replace with the Multilinea 10H CTSV Data
@@ -221,6 +229,110 @@ public partial class MultilineaPC1View : UserControl
         {
             Code = "34",
             Description = "Las rebabas, los bordes afilados y los materiales extraños resultantes de las buenas prácticas de fabricación son aceptables siempre que no sean perjuicios para el funcionamiento del ensamble o la manipulación segura según lo determine la ingeniería del motor",
+            Gage = "Visual",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+    };
+
+    private List<Dcp> op10wDcps = new List<Dcp>()
+    {
+        new Dcp(code: "DcpSn", inputPerTurn: 1, start: true, mid: true, end: false)
+        {
+            Code = "SN",
+            Description = "Calibración de Gages",
+            Gage = "Visual",
+            Sample = "1",
+            InspectFrequency = "Inicio y mitad de turno",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "DcpSn20", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "SN\n20",
+            Description = "Diametro exterior 199.50 ",
+            BoldDescription = "± 0.25 mm",
+            Gage = "G-1020-11",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "DcpSn81", inputPerTurn: 1, start: true, mid: false, end: false)
+        {
+            Code = "SN\n81",
+            Description = "52.3 ",
+            BoldDescription = "± 0.25 mm",
+            Gage = "CALIPER",
+            Sample = "1",
+            InspectFrequency = "Inicio de turno",
+            IsCheckBox = false,
+        },
+    };
+
+    private List<Dcp> op20wDcps = new List<Dcp>()
+    {
+        new Dcp(code: "DcpSn", inputPerTurn: 1, start: true, mid: true, end: false)
+        {
+            Code = "SN",
+            Description = "Calibración de Gages",
+            Gage = "Visual",
+            Sample = "1",
+            InspectFrequency = "Inicio y mitad de turno",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp131Ip", inputPerTurn: 1, start: true, mid: true, end: false)
+        {
+            Code = "131IP",
+            Description = "Altura\n51.05",
+            BoldDescription = "± 0.25 mm",
+            Gage = "G-1020-33",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp135", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "135",
+            Description = "Diamtero interior\n2x168.40 ",
+            BoldDescription = "± 0.15 mm",
+            Gage = "G-6397-47",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp139", inputPerTurn: 1, start: true, mid: true, end: false)
+        {
+            Code = "139",
+            Description = "Rugosidad\n",
+            BoldDescription = "4.0 - 6.5 Ra",
+            Gage = "RDC-010",
+            Sample = "1",
+            InspectFrequency = "Inicio y mitad de turno",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp142", inputPerTurn: 1, start: true, mid: false, end: false)
+        {
+            Code = "142",
+            Description = "Distancia\n",
+            BoldDescription = "25.0 ± 0.1 mm",
+            Gage = "CMM-001",
+            Sample = "1",
+            InspectFrequency = "Inicio de turno",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp23", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "23",
+            Description = "No se permite porosidad visual en el diámetro de sello, el área de las ranuras y el diámetro interno\nLa porosidad es permisible en otras superficies mecanizadas si menos de Ø 1.5 mm y menos de 1.00 mm de profundidad",
+            Gage = "Visual\nPara verificar piezas usar la plantilla F-2133-D",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp34", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "34",
+            Description = "Las rebabas, los bordes afilados y los materiales extraños resultantes de las buenas prácticas de fabricación son aceptables siempre que no sean prejuicios para el funcionamiento del ensamblaje o la manipulación segura según lo determine la ingeniería del motor",
             Gage = "Visual",
             Sample = "1",
             InspectFrequency = "100%",
