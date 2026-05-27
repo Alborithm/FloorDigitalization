@@ -77,6 +77,8 @@ public partial class MainWindowViewModel : ViewModelBase
     //     Dk68EpcViewModel
     //     Duramax10w20w25wViewModel
     //     Duramax30W40WViewModel
+    //     MultilineaPC1ViewModel
+    //     MultilineaPC2TruckViewModel
     //     )
     // {
     //     CurrentPage = l625BalanceoInspeccion;
@@ -87,7 +89,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC1ViewModel viewModel
+        MultilineaPC2TruckViewModel viewModel
         )
     {
         CurrentPage = viewModel;

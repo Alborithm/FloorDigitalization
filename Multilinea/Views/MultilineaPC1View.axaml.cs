@@ -48,7 +48,7 @@ public partial class MultilineaPC1View : UserControl
             Description = "CALIBRAR LOS GAGES ",
             Gage = "DE ACUERDO A INSTRUCTIVO",
             Sample = "1",
-            InspectFrequency = "INICIO DE TURNO ",
+            InspectFrequency = "INICIO Y MITAD DE TURNO ",
             IsCheckBox = true,
         },
         new Dcp(code: "Dcp57Ip", inputPerTurn: 1, start: true, mid: true, end: true)
