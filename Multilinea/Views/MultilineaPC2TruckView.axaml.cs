@@ -20,10 +20,10 @@ public partial class MultilineaPC2TruckView : UserControl
             "Multilinea | Truck | PTN-077 | 030A ",
             RecordNumber.First,
             DcpControlCreator.CreateGrid(op30aDcps, "First")));
-        // tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 020H", 
-        //     "Multilinea | Truck | PTN-107 | 020H ",
-        //     RecordNumber.Second,
-        //     DcpControlCreator.CreateGrid(op20hDcps, "Second")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 040A", 
+            "Multilinea | Truck | PBR-017 | 040A ",
+            RecordNumber.Second,
+            DcpControlCreator.CreateGrid(op40aDcps, "Second")));
         // tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010W", 
         //     "Multilinea | Truck | PTN-117 | 010W ",
         //     RecordNumber.Third,
@@ -168,5 +168,64 @@ public partial class MultilineaPC2TruckView : UserControl
             InspectFrequency = "100%",
             IsCheckBox = false,
         },
+    };
+
+    private List<Dcp> op40aDcps = new List<Dcp>()
+    {
+        new Dcp(code: "Dcp68", inputPerTurn: 1, start: true, mid: true, end: false)
+        {
+            Code = "68",
+            Description = "POSICION VERDADERA | ⊕ | 0.03 | Ⓜ | A | Ⓜ | B |",
+            Gage = "G-6400-34",
+            Sample = "1",
+            InspectFrequency = "INICIO Y MITAD DE TURNO ",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp69", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "69",
+            Description = "ANCHO DE CUÑERO 4.825  ±  0.025 mm ",
+            Gage = "G-1020-38",
+            Sample = "1",
+            InspectFrequency = "CADA 10 PIEZAS",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp86", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "86",
+            Description = "DISTANCIA 40.82 ± 0.1 mm ",
+            Gage = "G-6400-34",
+            Sample = "1",
+            InspectFrequency = "CADA 20 PIEZAS",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp87", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "87",
+            Description = "DIAMETRO INTERIOR 37.6125 ± 0.0125 mm \n►◄",
+            Gage = "G-6366-09",
+            Sample = "1",
+            InspectFrequency = "CADA 10 PIEZAS",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp23", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "23",
+            Description = "NO SE PERMITE POROSIDAD VISUAL EN EL DIÁMETRO DEL SELLO, EL ÁREA DE LAS RANURAS Y EL DIÁMETRO INTERNO LA POROSIDAD ES PERMISIBLE EN OTRAS SUPERFICIES MECANIZADAS SI MENOS DE Ø1,5 mm Y MENOS DE 1,0 mm DE PROFUNDIDAD",
+            Gage = "VISUAL Para verificar piezas usar la plantilla F-2133-D",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp34", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "34",
+            Description = "LAS REBABAS, LOS BORDES AFILADOS Y LOS MATERIALES EXTRAÑOS RESULTANTES DE LAS BUENAS PRÁCTICAS DE FABRICACIÓN SON ACEPTABLES SIEMPRE QUE NO SEAN PERJUICIOS PARA EL FUNCIONAMIENTO DEL ENSAMBLAJE O LA MANIPULACIÓN SEGURA SEGÚN LO DETERMINE LA INGENIERÍA DEL MOTOR",
+            Gage = "VISUAL",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+
     };
 }
