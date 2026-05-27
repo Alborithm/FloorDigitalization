@@ -80,6 +80,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     MultilineaPC1ViewModel
     //     MultilineaPC2TruckViewModel
     //     MultilineaPC3TruckViewModel
+    //     MultilineaPC4TruckViewModel
     //     )
     // {
     //     CurrentPage = l625BalanceoInspeccion;
@@ -90,7 +91,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC3TruckViewModel viewModel
+        MultilineaPC4TruckViewModel viewModel
         )
     {
         CurrentPage = viewModel;
