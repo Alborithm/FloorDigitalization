@@ -9,12 +9,12 @@ using FloorDigitalization.Helpers.Views;
 
 namespace FloorDigitalization.Multilinea.Views;
 
-public partial class MultilineaPC1View : UserControl
+public partial class MultilineaPC1TruckView : UserControl
 {
-    public MultilineaPC1View()
+    public MultilineaPC1TruckView()
     {
         InitializeComponent();
-        DataContext = new MultilineaPC1ViewModel();
+        DataContext = new MultilineaPC1TruckViewModel();
         var tabControl = this.FindControl<TabControl>("MainTabControl");
         tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Truck 010H", 
             "Multilinea | Truck | PTN-107 | 010H ",

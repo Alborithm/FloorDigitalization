@@ -91,7 +91,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC4TruckViewModel viewModel
+        MultilineaPC1TruckViewModel viewModel
         )
     {
         CurrentPage = viewModel;
