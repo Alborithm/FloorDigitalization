@@ -66,6 +66,7 @@ public partial class App : Application
         collection.AddTransient<MultilineaPC2TruckViewModel>();
         collection.AddTransient<MultilineaPC3TruckViewModel>();
         collection.AddTransient<MultilineaPC4TruckViewModel>();
+        collection.AddTransient<MultilineaPC1CtsvViewModel>();
 
         var services = collection.BuildServiceProvider();
 
