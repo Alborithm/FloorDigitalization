@@ -27,6 +27,7 @@ public static class FolderPaths
         [OperationNames.GenVMiniMazasEnsamble] = "C:\\Users\\slp.wkstn24\\MUVIQ S.R.L\\SLP Floor Digitalization - GenV Mini",
         [OperationNames.GenVMiniPostmaquinado] = "C:\\Users\\slp.wkstn14\\MUVIQ S.R.L\\SLP Floor Digitalization - GenV Mini",
         [OperationNames.GenVMiniPulidoCuneroBalanceo] = "C:\\Users\\slp.wkstn25\\MUVIQ S.R.L\\SLP Floor Digitalization - GenV Mini",
+        [OperationNames.Duramax10w20w25w] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - DMAX",
         [OperationNames.Dk68EnsambleLavadora] = "C:\\Users\\gerardo.albor\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Documentos\\Calidad\\ControlCalidad\\Test",
         [OperationNames.DebugPc] = "C:\\Users\\gerardo.albor\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Documentos\\Calidad\\ControlCalidad\\Test",
 

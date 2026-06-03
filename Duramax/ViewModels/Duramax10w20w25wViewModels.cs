@@ -9,7 +9,7 @@ namespace FloorDigitalization.Duramax.ViewModels;
 public partial class Duramax10w20w25wViewModel : QualityControlBaseViewModel<Op10W20W, Op10W20W, Estampado>
 {
     public Duramax10w20w25wViewModel() : base(
-                                                    OperationNames.DebugPc, 
+                                                    OperationNames.Duramax10w20w25w, 
                                                     ScreenNames.MaquinadoPTN010,
                                                     ScreenNames.MaquinadoPTN017,
                                                     ScreenNames.Estampado)

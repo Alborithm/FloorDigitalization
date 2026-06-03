@@ -92,7 +92,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC2CtsvViewModel viewModel
+        Duramax10w20w25wViewModel viewModel
         )
     {
         CurrentPage = viewModel;

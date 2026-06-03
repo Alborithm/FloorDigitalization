@@ -27,4 +27,6 @@ public enum OperationNames
     GenVMiniPulidoCuneroBalanceo,
     Dk68EnsambleLavadora,
     Dk68MuescaBalanceoLavadora,
+    Duramax10w20w25w,
+    Duramax30W40W
 }
