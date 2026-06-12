@@ -69,6 +69,7 @@ public partial class App : Application
         collection.AddTransient<MultilineaPC1CtsvViewModel>();
         collection.AddTransient<MultilineaPC2CtsvViewModel>();
         collection.AddTransient<MultilineaPC3CtsvViewModel>();
+        collection.AddTransient<MultilineaPC4CtsvViewModel>();
 
         var services = collection.BuildServiceProvider();
 
