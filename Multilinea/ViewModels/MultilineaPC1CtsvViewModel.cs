@@ -3,10 +3,11 @@ using FloorDigitalization.Models;
 using FloorDigitalization.ViewModels;
 using FloorDigitalization.Enums;
 using FloorDigitalization.Multilinea.Models;
+using FloorDigitalization.Multilinea.Models.Ctsv;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaPC1CtsvViewModel : QualityControlBaseViewModel<Op10HTruck, Op20HTruck, Op10WTruck, Op20WTruck, Op10ATruck>
+public partial class MultilineaPC1CtsvViewModel : QualityControlBaseViewModel<Op10HCtsv, Op20HTruck, Op10WTruck, Op20WTruck, Op10ATruck>
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC1CtsvViewModel() : base(
