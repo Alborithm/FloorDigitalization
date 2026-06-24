@@ -26,11 +26,24 @@ public partial class Op10HTruck : ObservableValidator
     [Range(dcp57IpLowerLimit, dcp57IpUpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcp57IpEnd;
 
-    // ----------- DCP 87IP -----------
-    [ObservableProperty] private bool _dcp87IpStart;
-    [ObservableProperty] private bool _dcp87IpMid;
-    [ObservableProperty] private bool _dcp87IpEnd;
+    // ----------- DCP 87IP_2 -----------
+    [ObservableProperty] private bool _dcp87Ip_1Start;
+    [ObservableProperty] private bool _dcp87Ip_1Mid;
+    [ObservableProperty] private bool _dcp87Ip_1End;
     
+    // ----------- DCP 87IP_2 -----------
+    private const double dcp87Ip_2LowerLimit = 35.95;
+    private const double dcp87Ip_2UpperLimit = 36.25;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp87Ip_2LowerLimit, dcp87Ip_2UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
+    private decimal? _dcp87Ip_2Start;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp87Ip_2LowerLimit, dcp87Ip_2UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp87Ip_2Mid;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp87Ip_2LowerLimit, dcp87Ip_2UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp87Ip_2End;
+
     // ----------- DCP 119 -----------
     private const double dcp119LowerLimit = -0.10;
     private const double dcp119UpperLimit = 0.10;
@@ -71,8 +84,8 @@ public partial class Op10HTruck : ObservableValidator
     private decimal? _dcp95IpEnd;
 
     // ----------- DCP 96 IP -----------
-    private const double dcp96IpLowerLimit = 23.10;
-    private const double dcp96IpUpperLimit = 23.60;
+    private const double dcp96IpLowerLimit = 25.10;
+    private const double dcp96IpUpperLimit = 25.60;
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp96IpLowerLimit, dcp96IpUpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
     private decimal? _dcp96IpStart;
@@ -89,7 +102,8 @@ public partial class Op10HTruck : ObservableValidator
         {
             new("DcpSn", start: true, mid: true, end: false),
             new("Dcp57Ip", start: true, mid: true, end: true),
-            new("Dcp87Ip", start: true, mid: true, end: true),
+            new("Dcp87Ip_1", start: true, mid: true, end: true),
+            new("Dcp87Ip_2", start: true, mid: true, end: true),
             new("Dcp119", start: true, mid: true, end: true),
             new("Dcp66Ip", start: true, mid: true, end: true),
             new("Dcp95Ip", start: true, mid: true, end: true),

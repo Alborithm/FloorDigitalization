@@ -52,8 +52,8 @@ public partial class Op20WTruck : ObservableValidator
     private decimal? _dcp139Mid;
 
     // ----------- DCP 142 -----------
-    private const double dcp142LowerLimit = 4.0;
-    private const double dcp142UpperLimit = 6.5;
+    private const double dcp142LowerLimit = 24.9;
+    private const double dcp142UpperLimit = 25.1;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp142LowerLimit, dcp142UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]

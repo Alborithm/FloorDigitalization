@@ -27,8 +27,8 @@ public partial class Op10WTruck : ObservableValidator
     private decimal? _dcpSn20End;
 
     // ----------- DCP SN 81 -----------
-    private const double dcpSn81LowerLimit = -.25;
-    private const double dcpSn81UpperLimit = .25;
+    private const double dcpSn81LowerLimit = 52.05;
+    private const double dcpSn81UpperLimit = 52.55;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcpSn81LowerLimit, dcpSn81UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]

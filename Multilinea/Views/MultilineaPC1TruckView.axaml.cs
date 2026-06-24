@@ -61,7 +61,7 @@ public partial class MultilineaPC1TruckView : UserControl
             InspectFrequency = "Cada 10 piezas",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp87Ip", inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "Dcp87Ip_1", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "87IP",
             Description = "Diametro interior 36.10 ± 0.15 mm",
@@ -69,6 +69,16 @@ public partial class MultilineaPC1TruckView : UserControl
             Sample = "1",
             InspectFrequency = "Cada 10 piezas",
             IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp87Ip_2", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "87IP",
+            Description = "Diametro interior ",
+            BoldDescription = "36.10 ± 0.15 mm",
+            Gage = "G-1020-45",
+            Sample = "1",
+            InspectFrequency = "Cada 10 piezas",
+            IsCheckBox = false,
         },
         new Dcp(code: "Dcp119", inputPerTurn: 1, start: true, mid: true, end: true)
         {
