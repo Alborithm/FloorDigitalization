@@ -95,7 +95,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC1CtsvViewModel viewModel
+        GenVPrincipalMazasEnsambleViewModel viewModel
         )
     {
         CurrentPage = viewModel;

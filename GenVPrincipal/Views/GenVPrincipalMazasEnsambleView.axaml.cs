@@ -81,7 +81,7 @@ public partial class GenVPrincipalMazasEnsambleView : UserControl
         {
             Code = "42\nIP",
             Description = "Diámetro interior en proceso 35.5 ",
-            BoldDescription = "± 0.25 mm",
+            BoldDescription = "± 0.2 mm",
             Gage = "40",
             Sample = "1",
             InspectFrequency = "Inicio de turno",
