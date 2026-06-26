@@ -98,7 +98,7 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp118", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "118",
-            Description = "ANILLO ID 161.3 ",
+            Description = "ANILLO DIAMETRO INTERIOR 161.3 ",
             BoldDescription = "± 0.08",
             PostDescription = "mm",
             Gage = "G-6397-47",
@@ -175,7 +175,7 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp40Ip_1", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "40IP",
-            Description = "NARIZ ID 36.1 ± 0.15 mm ",
+            Description = "NARIZ DIAMETRO INTERIOR 36.1 ± 0.15 mm ",
             Gage = "G-1020-03",
             Sample = "1",
             InspectFrequency = "100%",
@@ -184,7 +184,7 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp40Ip_2", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "40IP",
-            Description = "NARIZ ID ",
+            Description = "NARIZ DIAMETRO INTERIOR ",
             BoldDescription = "36.1 ± 0.15 mm ",
             Gage = "G-1020-45",
             Sample = "1",
