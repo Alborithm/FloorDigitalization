@@ -13,8 +13,8 @@ public partial class Op10HCtsv : ObservableValidator
     [ObservableProperty] private bool _dcpSnMid;
 
     // ----------- DCP 151 (2 readings) -----------
-    private const double dcp151LowerLimit = -.2;
-    private const double dcp151UpperLimit = .2;
+    private const double dcp151LowerLimit = -.18;
+    private const double dcp151UpperLimit = .18;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp151LowerLimit, dcp151UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
@@ -49,8 +49,8 @@ public partial class Op10HCtsv : ObservableValidator
     private decimal? _dcp22IpEnd;
 
     // ----------- DCP 31IP -----------
-    private const double dcp31IpLowerLimit = -.25;
-    private const double dcp31IpUpperLimit = .25;
+    private const double dcp31IpLowerLimit = 37.89;
+    private const double dcp31IpUpperLimit = 38.69;
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp31IpLowerLimit, dcp31IpUpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
     private decimal? _dcp31IpStart;
@@ -80,8 +80,8 @@ public partial class Op10HCtsv : ObservableValidator
     private decimal? _dcp40Ip_2End;
 
     // ----------- DCP 42IP -----------
-    private const double dcp42IpLowerLimit = -.20;
-    private const double dcp42IpUpperLimit = .20;
+    private const double dcp42IpLowerLimit = 22.5;
+    private const double dcp42IpUpperLimit = 23;
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp42IpLowerLimit, dcp42IpUpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
     private decimal? _dcp42IpStart;

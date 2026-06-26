@@ -10,7 +10,7 @@ public partial class MultilineaPC1TruckViewModel : QualityControlBaseViewModel<O
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC1TruckViewModel() : base(
-                                                    OperationNames.DebugPc, 
+                                                    OperationNames.MultilineaPC1, 
                                                     ScreenNames.MultilineaTruck10H,
                                                     ScreenNames.MultilineaTruck20H,
                                                     ScreenNames.MultilineaTruck10W,

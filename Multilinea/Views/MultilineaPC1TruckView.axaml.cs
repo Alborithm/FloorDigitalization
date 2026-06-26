@@ -272,7 +272,7 @@ public partial class MultilineaPC1TruckView : UserControl
             InspectFrequency = "Inicio y mitad de turno",
             IsCheckBox = true,
         },
-        new Dcp(code: "Dcp131Ip", inputPerTurn: 1, start: true, mid: true, end: false)
+        new Dcp(code: "Dcp131Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "131IP",
             Description = "Altura\n51.05",

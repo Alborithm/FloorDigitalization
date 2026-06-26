@@ -63,8 +63,8 @@ public partial class MultilineaPC1CtsvView : UserControl
         },
         new Dcp(code: "Dcp119", inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "87IP",
-            Description = "DIAMTETRO EXTERNO DE ANILLO 194.070 ",
+            Code = "119",
+            Description = "DIAMETRO EXTERNO DE ANILLO 194.070 ",
             BoldDescription = "± 0.25 mm",
             Gage = "G-1020-11",
             Sample = "1",
@@ -120,7 +120,7 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp79_156", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "79\n156",
-            Description = "CONDICION VISUAL DE ACUERDO A LA AYUDA VISUAL (AV-1154) Y POROSIDADA DE ACUERDO A AYUDA VISUAL (AV-1155) ",
+            Description = "CONDICION VISUAL DE ACUERDO A LA AYUDA VISUAL (AV-1154) Y POROSIDAD DE ACUERDO A AYUDA VISUAL (AV-1155) ",
             Gage = "VISUAL\nPara verificar piezas usar la plantilla F-2133-D",
             Sample = "1",
             InspectFrequency = "100%",
@@ -164,8 +164,8 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp31Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "31IP",
-            Description = "ALTURA DE BACK FACE 38.29 ",
-            BoldDescription = "± 0.40 ",
+            Description = "ALTURA DE BACK FACE ",
+            BoldDescription = "38.29 ± 0.40 ",
             PostDescription = "mm",
             Gage = "G-6397-40",
             Sample = "1",
@@ -184,17 +184,18 @@ public partial class MultilineaPC1CtsvView : UserControl
         new Dcp(code: "Dcp40Ip_2", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "40IP",
-            Description = "NARIZ ID 36.1 ± 0.15 mm ",
+            Description = "NARIZ ID ",
+            BoldDescription = "36.1 ± 0.15 mm ",
             Gage = "G-1020-45",
             Sample = "1",
             InspectFrequency = "INSPECCION CADA 10 PZ",
-            IsCheckBox = true,
+            IsCheckBox = false,
         },
         new Dcp(code: "Dcp42Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "42IP",
-            Description = "ALTURA DE MAMELON 22.75 ",
-            BoldDescription = "± 0.25 ",
+            Description = "ALTURA DE MAMELON ",
+            BoldDescription = "22.75 ± 0.25 ",
             PostDescription = "mm ",
             Gage = "G-6397-13",
             Sample = "1",
@@ -232,7 +233,7 @@ public partial class MultilineaPC1CtsvView : UserControl
             Gage = "REFERENCIA AV-1125",
             Sample = "1",
             InspectFrequency = "INICIO,  MITAD Y FINAL DE TURNO",
-            IsCheckBox = true,
+            IsCheckBox = false,
         },
         new Dcp(code: "Dcp11Ip", inputPerTurn: 1, start: true, mid: true, end: true)
         {
@@ -303,7 +304,7 @@ public partial class MultilineaPC1CtsvView : UserControl
         },
         new Dcp(code: "Dcp78", inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "SN78",
+            Code = "78",
             Description = "PROTUBERANCIA DE HULE NO DEBE EXCEDER LOS 2MM O ESTAR HUNDIDO A MAS DE 2MM EN BASE A SUPERFICIES METALICAS",
             Gage = "VISUAL G-6401-00",
             Sample = "1",
