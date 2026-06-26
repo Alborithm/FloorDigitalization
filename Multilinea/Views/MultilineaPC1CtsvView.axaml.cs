@@ -51,7 +51,7 @@ public partial class MultilineaPC1CtsvView : UserControl
             InspectFrequency = "INICIO Y MITAD DE TURNO ",
             IsCheckBox = true,
         },
-        new Dcp(code: "DcpSn51", inputPerTurn: 1, start: true, mid: false, end: false)
+        new Dcp(code: "DcpSn51", inputPerTurn: 1, start: false, mid: false, end: false)
         {
             Code = "SN\n51",
             Description = "CONCENTRICIDAD DEL ANILLO  ",

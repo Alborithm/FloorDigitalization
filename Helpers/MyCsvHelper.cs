@@ -688,7 +688,10 @@ public static class MyCsvHelper
         else if (objType == typeof(Multilinea.Models.Op10WTruck)) _fieldMaps = Multilinea.Models.Op10WTruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Op20WTruck)) _fieldMaps = Multilinea.Models.Op20WTruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op10HCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op10HCtsv.FieldMaps();
-        else if (objType == typeof(Multilinea.Models.Ctsv.Op10WCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op10WCtsv.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Ctsv.Op10WCtsv)) {
+            MultilinaCtsv10WSaveRecord(user, obj, phase, csv, noWork);
+            return;
+        }
         else if (objType == typeof(Multilinea.Models.Ctsv.Op20HCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op20HCtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op20WCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op20WCtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op20ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op20ACtsv.FieldMaps();
@@ -853,6 +856,96 @@ public static class MyCsvHelper
                 {
                     var value = prop.GetValue(obj);
                     if (value!.GetType() == typeof(bool))
+                    {
+                        csv.WriteField((bool)value ? "OK" : "NOK");
+                    }
+                    else
+                    {
+                        csv.WriteField(value);
+                    }
+                }
+            }
+
+            csv.NextRecord();
+        }
+    }
+
+    public static void MultilinaCtsv10WSaveRecord(User user, Object obj, ShiftPhase phase, CsvWriter csv, bool noWork)
+    {
+        // string route =  disk == Disk.Local ? routeLocal : routeShared;
+        // using (var writer = new StreamWriter($"{route}\\Pintura.csv", append: true))
+            
+        {
+            if (csv is null) throw new ArgumentNullException(nameof(csv));
+            if (user is null) throw new ArgumentNullException(nameof(user));
+            if (obj is null) throw new ArgumentNullException(nameof(obj));
+
+            // Common fields
+            csv.WriteField(user.Name);
+            csv.WriteField(user.Date);
+            csv.WriteField(user.Shift);
+            csv.WriteField(user.Nomina);
+            csv.WriteField(DateTime.Now);
+            csv.WriteField(phase.ToString()); // "Start", "Mid", "End"
+
+            var objType = obj.GetType();
+
+            List<PhaseFieldMap> _fieldMaps = Multilinea.Models.Ctsv.Op10WCtsv.FieldMaps();;
+
+            // Dynamic DCP fields
+            foreach (var map in _fieldMaps)
+            {
+                if(map.BaseName == "DcpSn51")
+                {
+                    var dcpSn51 =  objType.GetProperty(
+                        map.BaseName + "Any",
+                        BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+
+                    decimal? value = (decimal?)dcpSn51!.GetValue(obj);
+                    if(value == null)
+                    {
+                        csv.WriteField("NA");
+                    }
+                    else
+                    {
+                        csv.WriteField(value);
+                    }
+
+                    continue;
+                }
+                bool hasValue = phase switch
+                {
+                    ShiftPhase.Start => map.StartHasValue,
+                    ShiftPhase.Mid => map.MidHasValue,
+                    ShiftPhase.End => map.EndHasValue,
+                    _ => false
+                };
+
+                if (!hasValue)
+                {
+                    csv.WriteField("NA");
+                    continue;
+                }
+
+                var propName = map.BaseName + phase; // e.g. "DcpSn01Start"
+
+                var prop = objType.GetProperty(
+                    propName,
+                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+
+                if (prop == null)
+                {
+                    // Fallback if property not found
+                    csv.WriteField("NA");
+                }
+                else
+                {
+                    var value = prop.GetValue(obj);
+                    if(noWork)
+                    {
+                        csv.WriteField("NT");
+                    }
+                    else if (value!.GetType() == typeof(bool))
                     {
                         csv.WriteField((bool)value ? "OK" : "NOK");
                     }

@@ -18,7 +18,7 @@ public partial class Op10WCtsv : ObservableValidator
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcpSn51LowerLimit, dcpSn51UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")] 
-    private decimal? _dcpSn51Start;
+    private decimal? _dcpSn51Any;
 
     // ----------- DCP 119 -----------
     private const double dcp119LowerLimit = -.25;
