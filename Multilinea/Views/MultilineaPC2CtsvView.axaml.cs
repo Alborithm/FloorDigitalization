@@ -217,7 +217,7 @@ public partial class MultilineaPC2CtsvView : UserControl
             Gage = "G-1019-23",
             Sample = "1",
             InspectFrequency = "100% ",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
         new Dcp(code: "Dcp40_2", inputPerTurn: 3, start: true, mid: true, end: true)
         {
@@ -346,12 +346,11 @@ public partial class MultilineaPC2CtsvView : UserControl
         new Dcp(code: "Dcp51_38", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "51\n38",
-            Description = "Profundidad de cuñero 40.82 ± 0.1 mm Posición verdadera de cuñero",
-            BoldDescription = "| ⊕ | 0.03 | A | B |",
+            Description = "Profundidad de cuñero 40.82 ± 0.1 mm Posición verdadera de cuñero | ⊕ | 0.03 | A | B |",
             Gage = "G-1020-34",
             Sample = "1",
             InspectFrequency = "CADA 20 PIEZAS",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
         new Dcp(code: "Dcp40", inputPerTurn: 1, start: true, mid: true, end: true)
         {

@@ -30,8 +30,8 @@ public static class FolderPaths
         [OperationNames.Duramax10w20w25w] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - DMAX",
         [OperationNames.Dk68EnsambleLavadora] = "C:\\Users\\gerardo.albor\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Documentos\\Calidad\\ControlCalidad\\Test",
         [OperationNames.MultilineaPC1] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
+        [OperationNames.MultilineaPC2] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
         [OperationNames.DebugPc] = "C:\\Users\\gerardo.albor\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Documentos\\Calidad\\ControlCalidad\\Test",
-
     };
 
     public static string GetPath(OperationNames folderPathName)

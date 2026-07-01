@@ -52,6 +52,8 @@ public enum ScreenNames
     MultilineaCtsv10W,
     MultilineaCtsv20W,
     MultilineaCtsv20A,
+    MultilineaCtsv40A,
+    MultilineaCtsv50A,
     MultilineaTruck10H,
     MultilineaTruck20H,
     MultilineaTruck10W,

@@ -29,5 +29,6 @@ public enum OperationNames
     Dk68MuescaBalanceoLavadora,
     Duramax10w20w25w,
     Duramax30W40W,
-    MultilineaPC1
+    MultilineaPC1,
+    MultilineaPC2,
 }
