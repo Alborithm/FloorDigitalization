@@ -294,7 +294,7 @@ public partial class MultilineaPC2CtsvView : UserControl
         },
         new Dcp(code: "Dcp155", inputPerTurn: 1, start: true, mid: true, end: true)
         {
-            Code = "47",
+            Code = "155",
             Description = "RUN OUT DE MAMELON ",
             BoldDescription = "| ↗ | 0.05 | A |",
             Gage = "G-6397-54",
