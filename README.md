@@ -83,7 +83,9 @@ dotnet test - TBD
 
 ## 🏗️ Build for Release
 
-dotnet publish -c Release -r win-x64 --self-contained true
+(self contained to be tested) dotnet publish -c Release -r win-x64 --self-contained true
+
+dotnet publish -r win-x64 -c Release  
 
 
 You can change the runtime identifier (-r) for different platforms:
