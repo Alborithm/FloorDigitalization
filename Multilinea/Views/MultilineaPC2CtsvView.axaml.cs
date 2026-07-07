@@ -105,7 +105,7 @@ public partial class MultilineaPC2CtsvView : UserControl
             InspectFrequency = "100%",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp17", inputPerTurn: 1, start: true, mid: true, end: false)
+        new Dcp(code: "Dcp17", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "17",
             Description = "RUN OUT AXIAL A LA 2DA RANURA ",
@@ -116,18 +116,18 @@ public partial class MultilineaPC2CtsvView : UserControl
             InspectFrequency = "100%",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp18", inputPerTurn: 1, start: true, mid: true, end: false)
+        new Dcp(code: "Dcp18", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "18",
             Description = "ALTURA 24.680 ",
             BoldDescription = "± 0.25 ",
             PostDescription = "mm",
-            Gage = "G-6397-54",
+            Gage = "G-6397-13-1",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS ",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp20", inputPerTurn: 1, start: true, mid: true, end: false)
+        new Dcp(code: "Dcp20", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "20",
             Description = "DIAMETRO DE LA SEGUNDA RANURA 187.99 ",
@@ -178,14 +178,14 @@ public partial class MultilineaPC2CtsvView : UserControl
             InspectFrequency = "100% ",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp29", inputPerTurn: 1, start: true, mid: true, end: false)
+        new Dcp(code: "Dcp29", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "29",
             Description = "RUGOSIDAD Ra",
             BoldDescription = "2.5",
             Gage = "RDC-010",
             Sample = "1",
-            InspectFrequency = "CADA 10 PIEZAS ",
+            InspectFrequency = "INICIO MITAD Y FINAL DE TURNO ",
             IsCheckBox = false,
         },
         new Dcp(code: "Dcp31", inputPerTurn: 1, start: true, mid: true, end: true)
@@ -213,7 +213,6 @@ public partial class MultilineaPC2CtsvView : UserControl
         {
             Code = "40",
             Description = "DIAMETRO INTERIOR 37.6125 ± 0.0125 mm\n►◄",
-            BoldDescription = "| ↗ | 0.125 | A |",
             Gage = "G-1019-23",
             Sample = "1",
             InspectFrequency = "100% ",
@@ -266,7 +265,7 @@ public partial class MultilineaPC2CtsvView : UserControl
         new Dcp(code: "Dcp45", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "45",
-            Description = "DIAMETRO INTERIOR 37.6125 ± 0.125 mm",
+            Description = "DIAMETRO CAJERA 37.875 ± 0.125 mm",
             Gage = "G-6366-12",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS ",
@@ -275,7 +274,7 @@ public partial class MultilineaPC2CtsvView : UserControl
         new Dcp(code: "Dcp46", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "46",
-            Description = "SEAL OD 54.065 ",
+            Description = "DIAMETRO DE SELLO 54.065 ",
             BoldDescription = "± 0.065",
             Gage = "G-1020-24",
             Sample = "1",
@@ -306,7 +305,6 @@ public partial class MultilineaPC2CtsvView : UserControl
         {
             Code = "78\n156",
             Description = "CONDICION VISUAL DE ACUERDO A LA AYUDA VISUAL (AV-1154) Y POROSIDADA DE ACUERDO A AYUDA VISUAL (AV-1155) ",
-            BoldDescription = "| ↗ | 0.05 | A |",
             Gage = "VISUAL\nPara verificar piezas usar la plantilla F-2133-D",
             Sample = "1",
             InspectFrequency = "100%",
@@ -321,7 +319,7 @@ public partial class MultilineaPC2CtsvView : UserControl
             InspectFrequency = "100%",
             IsCheckBox = true,
         },
-        new Dcp(code: "DcpSn2", inputPerTurn: 1, start: true, mid: true, end: true)
+        new Dcp(code: "DcpSn2", inputPerTurn: 1, start: true, mid: false, end: false)
         {
             Code = "SN",
             Description = "PRESENCIA DE RANURAS (POKA YOKE) ",

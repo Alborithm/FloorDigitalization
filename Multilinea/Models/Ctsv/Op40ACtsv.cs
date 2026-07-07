@@ -93,6 +93,9 @@ public partial class Op40ACtsv : ObservableValidator
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp17LowerLimit, dcp17UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcp17Mid;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp17LowerLimit, dcp17UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp17End;
 
     // ----------- DCP 18 -----------
     private const double dcp18LowerLimit = -0.25;
@@ -104,6 +107,9 @@ public partial class Op40ACtsv : ObservableValidator
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp18LowerLimit, dcp18UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcp18Mid;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp18LowerLimit, dcp18UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp18End;
 
     // ----------- DCP 20 -----------
     private const double dcp20LowerLimit = -0.30;
@@ -115,6 +121,9 @@ public partial class Op40ACtsv : ObservableValidator
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp20LowerLimit, dcp20UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcp20Mid;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp20LowerLimit, dcp20UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp20End;
 
     // ----------- DCP 21 -----------
     private const double dcp21LowerLimit = -0.0;
@@ -164,6 +173,9 @@ public partial class Op40ACtsv : ObservableValidator
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp29LowerLimit, dcp29UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
     private decimal? _dcp29Mid;
+    [ObservableProperty][NotifyDataErrorInfo]
+    [Range(dcp29LowerLimit, dcp29UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
+    private decimal? _dcp29End;
     
     // ----------- DCP 31 -----------
     private const double dcp31LowerLimit = -0.25;
@@ -331,8 +343,6 @@ public partial class Op40ACtsv : ObservableValidator
 
     // ----------- DCP SN 2 -----------
     [ObservableProperty] private bool _dcpSn2Start;
-    [ObservableProperty] private bool _dcpSn2Mid;
-    [ObservableProperty] private bool _dcpSn2End;
 
     public static List<PhaseFieldMap> FieldMaps()
     {
@@ -344,14 +354,14 @@ public partial class Op40ACtsv : ObservableValidator
             new("Dcp14", start: true, mid: true, end: true),
             new("Dcp15", start: true, mid: true, end: true),
             new("Dcp16", start: true, mid: true, end: true),
-            new("Dcp17", start: true, mid: true, end: false),
-            new("Dcp18", start: true, mid: true, end: false),
-            new("Dcp20", start: true, mid: true, end: false),
+            new("Dcp17", start: true, mid: true, end: true),
+            new("Dcp18", start: true, mid: true, end: true),
+            new("Dcp20", start: true, mid: true, end: true),
             new("Dcp21", start: true, mid: true, end: true),
             new("Dcp24", start: true, mid: true, end: true),
             new("Dcp23", start: true, mid: true, end: true),
             new("Dcp27", start: true, mid: true, end: true),
-            new("Dcp29", start: true, mid: true, end: false),
+            new("Dcp29", start: true, mid: true, end: true),
             new("Dcp31", start: true, mid: true, end: true),
             new("Dcp30", start: true, mid: true, end: true),
             new("Dcp40_1", start: true, mid: true, end: true),
