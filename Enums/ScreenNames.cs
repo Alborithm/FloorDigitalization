@@ -59,6 +59,8 @@ public enum ScreenNames
     MultilineaTruck10W,
     MultilineaTruck20W,
     MultilineaTruck10A,
+    MultilineaTruck30A,
+    MultilineaTruck40A,
     Pintado,
     Pintura,
     Postmaquinado,

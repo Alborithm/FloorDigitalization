@@ -687,6 +687,8 @@ public static class MyCsvHelper
         else if (objType == typeof(Multilinea.Models.Op20HTruck)) _fieldMaps = Multilinea.Models.Op20HTruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Op10WTruck)) _fieldMaps = Multilinea.Models.Op10WTruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Op20WTruck)) _fieldMaps = Multilinea.Models.Op20WTruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Truck.Op30ATruck)) _fieldMaps = Multilinea.Models.Truck.Op30ATruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Truck.Op40ATruck)) _fieldMaps = Multilinea.Models.Truck.Op40ATruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op10HCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op10HCtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op10WCtsv)) {
             MultilinaCtsv10WSaveRecord(user, obj, phase, csv, noWork);

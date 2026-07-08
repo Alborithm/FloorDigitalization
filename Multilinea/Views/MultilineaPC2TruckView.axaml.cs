@@ -54,7 +54,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "DcpSn80", inputPerTurn: 1, start: true, mid: true, end: false)
         {
             Code = "SN\n80",
-            Description = "RUGOSIDAD AREA DE SELLO 0.9-1.5 Ra ",
+            Description = "RUGOSIDAD AREA DE SELLO ",
+            BoldDescription = "0.9-1.5 Ra ",
             Gage = "RDC-010",
             Sample = "1",
             InspectFrequency = "INICIO Y MITAD DE TURNO ",
@@ -63,16 +64,18 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp49", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "49",
-            Description = "LOCALIZACIÓN DE MAZA 5ª RANURA 112.352 ± 0.100 mm \n►◄",
+            Description = "LOCALIZACIÓN DE MAZA 5ª RANURA ",
+            BoldDescription = "112.352 ± 0.100 mm \n►◄",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
-            IsCheckBox = true,
+            IsCheckBox = false,
         },
         new Dcp(code: "Dcp50", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "50",
-            Description = "RUN OUT RADIAL MAZA 5ª RANURA | ↗ | 0.25 | A | \n►◄",
+            Description = "RUN OUT RADIAL MAZA 5ª RANURA ",
+            BoldDescription = " | ↗ | 0.25 | A | \n►◄",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
@@ -81,7 +84,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp51", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "51",
-            Description = "LOCALIZACION ANILLO  3ª RANURA 69.422 ± 0.25 mm \n►◄",
+            Description = "LOCALIZACION ANILLO  3ª RANURA ",
+            BoldDescription = "69.422 ± 0.25 mm \n►◄",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
@@ -90,7 +94,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp52", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "52",
-            Description = "RUN OUT RADIAL ANILLO  3ª RANURA | ↗ | 0.25 | A | \n►◄ ",
+            Description = "RUN OUT RADIAL ANILLO  3ª RANURA ",
+            BoldDescription = "| ↗ | 0.25 | A | \n►◄ ",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
@@ -99,7 +104,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp58", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "58",
-            Description = "DIAMETRO 187.99 ± 0.30 mm ",
+            Description = "DIAMETRO ",
+            BoldDescription = "187.99 ± 0.30 mm ",
             Gage = "G-6425-12",
             Sample = "1",
             InspectFrequency = "100%",
@@ -108,7 +114,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp60", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "60",
-            Description = "RUN OUT AXIAL ANILLO | ↗ | 0.35 | A | ",
+            Description = "RUN OUT AXIAL ANILLO ",
+            BoldDescription = "| ↗ | 0.35 | A | ",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
@@ -117,7 +124,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp61", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "61",
-            Description = "RUN OUT AXIAL ANILLO 3ª RANURA | ↗ | 0.25 | A | \n►◄ ",
+            Description = "RUN OUT AXIAL ANILLO 3ª RANURA ",
+            BoldDescription = "| ↗ | 0.25 | A | \n►◄ ",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
@@ -126,7 +134,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp66", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "66",
-            Description = "ALTURA DE BACK FACE 35.29 ± 0.25 mm ",
+            Description = "ALTURA DE BACK FACE ",
+            BoldDescription = "35.29 ± 0.25 mm ",
             Gage = "G-1020-22",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS",
@@ -135,7 +144,8 @@ public partial class MultilineaPC2TruckView : UserControl
         new Dcp(code: "Dcp67", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "67",
-            Description = "BACK FACE RUN OUT | ↗ | 0.125 | A |",
+            Description = "BACK FACE RUN OUT ",
+            BoldDescription = "| ↗ | 0.125 | A |",
             Gage = "G-1020-22",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS",
@@ -148,25 +158,103 @@ public partial class MultilineaPC2TruckView : UserControl
             Gage = "G-1020-21",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
         new Dcp(code: "Dcp73", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "73",
-            Description = "RUN OUT RADIAL ANILLO  5ª RANURA  | ↗ | 0.25 | A | \n►◄ ",
+            Description = "RUN OUT RADIAL ANILLO  5ª RANURA ",
+            BoldDescription = "| ↗ | 0.25 | A | \n►◄ ",
             Gage = "G-1020-19",
             Sample = "1",
             InspectFrequency = "100%",
             IsCheckBox = false,
         },
-        new Dcp(code: "Dcp87", inputPerTurn: 3, start: true, mid: true, end: true)
+        new Dcp(code: "Dcp87_1", inputPerTurn: 3, start: true, mid: true, end: true)
         {
             Code = "87",
-            Description = "DIAMETRO INTERIOR 37.6125 ± 0.0125 mm \n►◄ ",
+            Description = "DIAMETRO INTERIOR ",
+            BoldDescription = "37.6125 ± 0.0125 mm \n►◄ ",
             Gage = "G-6366-09\nColumna ",
             Sample = "1",
             InspectFrequency = "100%",
             IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp75", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "75",
+            Description = "RUN OUT AXIAL ANILLO (MASA) 5ª RANURA \n",
+            BoldDescription = "| ↗ | 0.35 | A | ",
+            Gage = "G-1020-19",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp87_2", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "87",
+            Description = "DIAMETRO INTERIOR 37.6125 ± 0.0125 mm\n►◄",
+            Gage = "G-1019-23\nPerno",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "Dcp88", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "88",
+            Description = "RUGOSIDAD DE DIAMETRO INTERIOR ",
+            BoldDescription = "1.25 - 2.5 Ra",
+            Gage = "RDC-010",
+            Sample = "1",
+            InspectFrequency = "CADA 20 PIEZAS",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp89", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "89",
+            Description = "DIAMETRO EXTERIOR ",
+            BoldDescription = "54.065 ± 0.065 mm",
+            Gage = "G-1020-24",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp90", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "90",
+            Description = "RUN OUT RADIAL DE DIAMETRO EXTERIOR ",
+            BoldDescription = "| ↗ | 0.25 | A | ",
+            Gage = "G-1020-19",
+            Sample = "1",
+            InspectFrequency = "CADA 20 PIEZAS",
+            IsCheckBox = false,
+        },
+        new Dcp(code: "Dcp94", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "94",
+            Description = "DIAMETRO INTERIOR  CAJERA 37.875 ± 0.125 mm ",
+            Gage = "G-1020-23",
+            Sample = "1",
+            InspectFrequency = "CADA 10 PIEZAS",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "DcpSn_1", inputPerTurn: 1, start: true, mid: true, end: true)
+        {
+            Code = "SN",
+            Description = "DISTANCIA DE CARA DE MAMELON A TERCER RANURA",
+            Gage = "G-1020-44",
+            Sample = "1",
+            InspectFrequency = "100%",
+            IsCheckBox = true,
+        },
+        new Dcp(code: "DcpSn_2", inputPerTurn: 1, start: true, mid: false, end: false)
+        {
+            Code = "SN",
+            Description = "PRESENCIA DE RANURAS (POKA YOKE) ",
+            Gage = "PY-215",
+            Sample = "1",
+            InspectFrequency = "INICIO DE TURNO",
+            IsCheckBox = true,
         },
     };
 
@@ -205,7 +293,7 @@ public partial class MultilineaPC2TruckView : UserControl
             Description = "DIAMETRO INTERIOR 37.6125 ± 0.0125 mm \n►◄",
             Gage = "G-6366-09",
             Sample = "1",
-            InspectFrequency = "CADA 10 PIEZAS",
+            InspectFrequency = "CADA HORA",
             IsCheckBox = true,
         },
         new Dcp(code: "Dcp23", inputPerTurn: 1, start: true, mid: true, end: true)
