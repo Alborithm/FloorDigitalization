@@ -31,4 +31,5 @@ public enum OperationNames
     Duramax30W40W,
     MultilineaPC1,
     MultilineaPC2,
+    MultilineaPC3,
 }

@@ -54,7 +54,9 @@ public partial class MultilineaPC3TruckView : UserControl
         new Dcp(code: "Dcp99", inputPerTurn: 2, start: true, mid: true, end: true)
         {
             Code = "99",
-            Description = "RUGOSIDAD DE DIAMETRO EXTERIOR 0.6 - 0.25 Ra \nMedir en dos puntos  ",
+            Description = "RUGOSIDAD DE DIAMETRO EXTERIOR \n",
+            BoldDescription = "0.6 - 0.25 Ra \n\n",
+            PostDescription = "Medir en dos puntos ",
             Gage = "RDC-010",
             Sample = "1",
             InspectFrequency = "CADA 20 PIEZAS ",
@@ -67,7 +69,7 @@ public partial class MultilineaPC3TruckView : UserControl
             Gage = "G-1020-28",
             Sample = "1",
             InspectFrequency = "CADA 20 PIEZAS",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
         new Dcp(code: "Dcp23", inputPerTurn: 1, start: true, mid: true, end: true)
         {
@@ -76,7 +78,7 @@ public partial class MultilineaPC3TruckView : UserControl
             Gage = "VISUAL Para verificar piezas usar la plantilla F-2133-D",
             Sample = "1",
             InspectFrequency = "100%",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
         new Dcp(code: "Dcp34_62", inputPerTurn: 1, start: true, mid: true, end: true)
         {
@@ -85,7 +87,7 @@ public partial class MultilineaPC3TruckView : UserControl
             Gage = "VISUAL",
             Sample = "1",
             InspectFrequency = "100%",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
     };
 

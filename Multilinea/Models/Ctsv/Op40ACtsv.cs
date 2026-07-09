@@ -165,7 +165,7 @@ public partial class Op40ACtsv : ObservableValidator
 
     // ----------- DCP 29 -----------
     private const double dcp29LowerLimit = 0.00;
-    private const double dcp29UpperLimit = 0.25;
+    private const double dcp29UpperLimit = 2.5;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp29LowerLimit, dcp29UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
@@ -257,8 +257,8 @@ public partial class Op40ACtsv : ObservableValidator
     private decimal? _dcp41End;
 
     // ----------- DCP 42 -----------
-    private const double dcp42LowerLimit = -.25;
-    private const double dcp42UpperLimit = .25;
+    private const double dcp42LowerLimit = 22.5;
+    private const double dcp42UpperLimit = 23.0;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp42LowerLimit, dcp42UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]
@@ -271,8 +271,8 @@ public partial class Op40ACtsv : ObservableValidator
     private decimal? _dcp42End;
 
     // ----------- DCP 43 -----------
-    private const double dcp43LowerLimit = -.25;
-    private const double dcp43UpperLimit = .25;
+    private const double dcp43LowerLimit = 25.1;
+    private const double dcp43UpperLimit = 25.6;
 
     [ObservableProperty][NotifyDataErrorInfo]
     [Range(dcp43LowerLimit, dcp43UpperLimit, ErrorMessage = "Valor fuera de especificación ({1} a {2})")]

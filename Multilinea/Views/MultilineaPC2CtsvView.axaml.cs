@@ -243,8 +243,8 @@ public partial class MultilineaPC2CtsvView : UserControl
         new Dcp(code: "Dcp42", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "42",
-            Description = "ALTURA 22.75 ",
-            BoldDescription = "± 0.25",
+            Description = "ALTURA ",
+            BoldDescription = "22.5 a 23.0",
             PostDescription = "mm",
             Gage = "G-6397-13",
             Sample = "1",
@@ -254,8 +254,8 @@ public partial class MultilineaPC2CtsvView : UserControl
         new Dcp(code: "Dcp43", inputPerTurn: 1, start: true, mid: true, end: true)
         {
             Code = "43",
-            Description = "ALTURA 25.35 ",
-            BoldDescription = "± 0.25",
+            Description = "ALTURA ",
+            BoldDescription = "25.1 a 25.6",
             PostDescription = "mm",
             Gage = "G-6397-13",
             Sample = "1",
