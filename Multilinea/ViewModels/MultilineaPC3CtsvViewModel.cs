@@ -2,17 +2,17 @@
 using FloorDigitalization.Models;
 using FloorDigitalization.ViewModels;
 using FloorDigitalization.Enums;
-using FloorDigitalization.Multilinea.Models;
+using FloorDigitalization.Multilinea.Models.Ctsv;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaPC3CtsvViewModel : QualityControlBaseViewModel<Op10HTruck, Op10HTruck>
+public partial class MultilineaPC3CtsvViewModel : QualityControlBaseViewModel<Op60ACtsv, Op70ACtsv>
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC3CtsvViewModel() : base(
-                                                    OperationNames.DebugPc, 
-                                                    ScreenNames.MultilineaTruck10H,
-                                                    ScreenNames.MultilineaTruck20H)
+                                                    OperationNames.MultilineaPC3, 
+                                                    ScreenNames.MultilineaCtsv60A,
+                                                    ScreenNames.MultilineaCtsv70A)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {

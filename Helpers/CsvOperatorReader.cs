@@ -18,7 +18,7 @@ public static class CsvOperatorReader
         };
         try
         {
-            using (var reader = new StreamReader("V:\\IT\\ControlCalidad\\Datos\\Lista_Operadores_DataList2.csv"))
+            using (var reader = new StreamReader("\\\\sl-srvfil\\Department\\IT\\ControlCalidad\\Datos\\Lista_Operadores_DataList2.csv"))
             using (var csv = new CsvReader(reader, config))
             {
                 var records = csv.GetRecords<Operator>();

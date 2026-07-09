@@ -700,6 +700,8 @@ public static class MyCsvHelper
         else if (objType == typeof(Multilinea.Models.Ctsv.Op20ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op20ACtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op40ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op40ACtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op50ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op50ACtsv.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Ctsv.Op60ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op60ACtsv.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Ctsv.Op70ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op70ACtsv.FieldMaps();
         else throw new NotImplementedException();
 
         // Dynamic DCP fields
