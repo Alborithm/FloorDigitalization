@@ -12,6 +12,7 @@ using FloorDigitalization.Dk68.ViewModels;
 using FloorDigitalization.Duramax.ViewModels;
 using System.Reflection;
 using FloorDigitalization.Multilinea.ViewModels;
+using FloorDigitalization.NewPenta.ViewModels;
 
 namespace FloorDigitalization.ViewModels;
 
@@ -95,7 +96,7 @@ public partial class MainWindowViewModel : ViewModelBase
     //     User.Shift = currentShift;
     // }
     public MainWindowViewModel(
-        MultilineaPC4CtsvViewModel viewModel
+        NewPentaAnillosViewModel viewModel
         )
     {
         CurrentPage = viewModel;

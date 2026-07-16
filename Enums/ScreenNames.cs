@@ -67,6 +67,8 @@ public enum ScreenNames
     MultilineaTruck40A,
     MultilineaTruck60A,
     MultilineaTruck90A,
+    NewPentaAnillosPTN116,
+    NewPentaAnillosPTN086,
     Pintado,
     Pintura,
     Postmaquinado,

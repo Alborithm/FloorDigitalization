@@ -16,6 +16,7 @@ using FloorDigitalization.L625.ViewModels;
 using FloorDigitalization.Dk68.ViewModels;
 using FloorDigitalization.Duramax.ViewModels;
 using FloorDigitalization.Multilinea.ViewModels;
+using FloorDigitalization.NewPenta.ViewModels;
 
 namespace FloorDigitalization;
 
@@ -70,6 +71,7 @@ public partial class App : Application
         collection.AddTransient<MultilineaPC2CtsvViewModel>();
         collection.AddTransient<MultilineaPC3CtsvViewModel>();
         collection.AddTransient<MultilineaPC4CtsvViewModel>();
+        collection.AddTransient<NewPentaAnillosViewModel>();
 
         var services = collection.BuildServiceProvider();
 

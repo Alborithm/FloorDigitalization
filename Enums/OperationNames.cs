@@ -33,4 +33,8 @@ public enum OperationNames
     MultilineaPC2,
     MultilineaPC3,
     MultilineaPC4,
+    NewPentaAnillos,
+    NewPentaEnsambleEstampado,
+    NewPentaBalanceo,
+    NewPentaPintura,
 }
