@@ -32,6 +32,7 @@ public static class FolderPaths
         [OperationNames.MultilineaPC1] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
         [OperationNames.MultilineaPC2] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
         [OperationNames.MultilineaPC3] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
+        [OperationNames.MultilineaPC4] = "C:\\Users\\slp.wkstn19\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Multilinea",
         [OperationNames.DebugPc] = "C:\\Users\\gerardo.albor\\OneDrive - MUVIQ S.R.L\\SLP Floor Digitalization - Documentos\\Calidad\\ControlCalidad\\Test",
     };
 

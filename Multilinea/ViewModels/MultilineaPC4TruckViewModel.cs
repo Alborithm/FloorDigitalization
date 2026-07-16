@@ -2,16 +2,16 @@
 using FloorDigitalization.Models;
 using FloorDigitalization.ViewModels;
 using FloorDigitalization.Enums;
-using FloorDigitalization.Multilinea.Models;
+using FloorDigitalization.Multilinea.Models.Truck;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaPC4TruckViewModel : QualityControlBaseViewModel<Op10HTruck>
+public partial class MultilineaPC4TruckViewModel : QualityControlBaseViewModel<Op90ATruck>
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC4TruckViewModel() : base(
-                                                    OperationNames.DebugPc, 
-                                                    ScreenNames.MultilineaTruck10H)
+                                                    OperationNames.MultilineaPC4, 
+                                                    ScreenNames.MultilineaTruck90A)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {

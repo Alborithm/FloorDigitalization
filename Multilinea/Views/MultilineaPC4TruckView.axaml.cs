@@ -67,7 +67,7 @@ public partial class MultilineaPC4TruckView : UserControl
             Gage = "2D SCANNER ",
             Sample = "1",
             InspectFrequency = "100% ",
-            IsCheckBox = false,
+            IsCheckBox = true,
         },
     };
 

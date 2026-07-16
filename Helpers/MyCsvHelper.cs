@@ -690,6 +690,7 @@ public static class MyCsvHelper
         else if (objType == typeof(Multilinea.Models.Truck.Op30ATruck)) _fieldMaps = Multilinea.Models.Truck.Op30ATruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Truck.Op40ATruck)) _fieldMaps = Multilinea.Models.Truck.Op40ATruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Truck.Op60ATruck)) _fieldMaps = Multilinea.Models.Truck.Op60ATruck.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Truck.Op90ATruck)) _fieldMaps = Multilinea.Models.Truck.Op90ATruck.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op10HCtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op10HCtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op10WCtsv)) {
             MultilinaCtsv10WSaveRecord(user, obj, phase, csv, noWork);
@@ -702,6 +703,8 @@ public static class MyCsvHelper
         else if (objType == typeof(Multilinea.Models.Ctsv.Op50ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op50ACtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op60ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op60ACtsv.FieldMaps();
         else if (objType == typeof(Multilinea.Models.Ctsv.Op70ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op70ACtsv.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Ctsv.Op100ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op100ACtsv.FieldMaps();
+        else if (objType == typeof(Multilinea.Models.Ctsv.Op110ACtsv)) _fieldMaps = Multilinea.Models.Ctsv.Op110ACtsv.FieldMaps();
         else throw new NotImplementedException();
 
         // Dynamic DCP fields

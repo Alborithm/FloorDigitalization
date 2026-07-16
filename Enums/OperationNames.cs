@@ -32,4 +32,5 @@ public enum OperationNames
     MultilineaPC1,
     MultilineaPC2,
     MultilineaPC3,
+    MultilineaPC4,
 }

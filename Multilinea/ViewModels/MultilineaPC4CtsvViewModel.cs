@@ -2,16 +2,17 @@
 using FloorDigitalization.Models;
 using FloorDigitalization.ViewModels;
 using FloorDigitalization.Enums;
-using FloorDigitalization.Multilinea.Models;
+using FloorDigitalization.Multilinea.Models.Ctsv;
 
 namespace FloorDigitalization.Multilinea.ViewModels;
 
-public partial class MultilineaPC4CtsvViewModel : QualityControlBaseViewModel<Op10HTruck>
+public partial class MultilineaPC4CtsvViewModel : QualityControlBaseViewModel<Op100ACtsv, Op110ACtsv>
 {
     // This is Mazas, Anillos, Ensamble
     public MultilineaPC4CtsvViewModel() : base(
-                                                    OperationNames.DebugPc, 
-                                                    ScreenNames.MultilineaTruck10H)
+                                                    OperationNames.MultilineaPC4, 
+                                                    ScreenNames.MultilineaCtsv100A,
+                                                    ScreenNames.MultilineaCtsv110A)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {
@@ -21,14 +22,14 @@ public partial class MultilineaPC4CtsvViewModel : QualityControlBaseViewModel<Op
         {
             SaveFirstCommand.NotifyCanExecuteChanged();
         };
-        // SecondRecord.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveSecondCommand.NotifyCanExecuteChanged();
-        // };
-        // SecondUser.PropertyChanged += (sender, e) =>
-        // {
-        //     SaveSecondCommand.NotifyCanExecuteChanged();
-        // };
+        SecondRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveSecondCommand.NotifyCanExecuteChanged();
+        };
+        SecondUser.PropertyChanged += (sender, e) =>
+        {
+            SaveSecondCommand.NotifyCanExecuteChanged();
+        };
         // ThirdRecord.PropertyChanged += (sender, e) =>
         // {
         //     SaveThirdCommand.NotifyCanExecuteChanged();
