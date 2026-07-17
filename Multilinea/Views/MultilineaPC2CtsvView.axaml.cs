@@ -122,7 +122,7 @@ public partial class MultilineaPC2CtsvView : UserControl
             Description = "ALTURA 24.680 ",
             BoldDescription = "± 0.25 ",
             PostDescription = "mm",
-            Gage = "G-6397-13-1",
+            Gage = "G-6397-54",
             Sample = "1",
             InspectFrequency = "CADA 10 PIEZAS ",
             IsCheckBox = false,
