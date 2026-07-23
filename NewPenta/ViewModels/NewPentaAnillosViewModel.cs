@@ -13,12 +13,16 @@ using Serilog;
 using FloorDigitalization.ViewModels;
 namespace FloorDigitalization.NewPenta.ViewModels;
 
-public partial class NewPentaAnillosViewModel : QualityControlBaseViewModel<Anillos, Anillos>
+public partial class NewPentaAnillosViewModel : QualityControlBaseViewModel<Anillos, Anillos, Anillos, Anillos, Anillos, Anillos>
 {
     public NewPentaAnillosViewModel() : base(
                                                     OperationNames.NewPentaAnillos,
                                                     ScreenNames.NewPentaAnillosPTN116,
-                                                    ScreenNames.NewPentaAnillosPTN086)
+                                                    ScreenNames.NewPentaAnillosPTN086,
+                                                    ScreenNames.NewPentaAnillosPTN109,
+                                                    ScreenNames.NewPentaAnillosPTN103,
+                                                    ScreenNames.NewPentaAnillosPTN106,
+                                                    ScreenNames.NewPentaAnillosPTN115)
     {
         FirstRecord.PropertyChanged += (sender, e) =>
         {
@@ -35,6 +39,38 @@ public partial class NewPentaAnillosViewModel : QualityControlBaseViewModel<Anil
         SecondUser.PropertyChanged += (sender, e) =>
         {
             SaveSecondCommand.NotifyCanExecuteChanged();
+        };
+        ThirdRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveThirdCommand.NotifyCanExecuteChanged();
+        };
+        ThirdUser.PropertyChanged += (sender, e) =>
+        {
+            SaveThirdCommand.NotifyCanExecuteChanged();
+        };
+        ForthRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveForthCommand.NotifyCanExecuteChanged();
+        };
+        ForthUser.PropertyChanged += (sender, e) =>
+        {
+            SaveForthCommand.NotifyCanExecuteChanged();
+        };
+        FifthRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveFifthCommand.NotifyCanExecuteChanged();
+        };
+        FifthUser.PropertyChanged += (sender, e) =>
+        {
+            SaveFifthCommand.NotifyCanExecuteChanged();
+        };
+        SixthRecord.PropertyChanged += (sender, e) =>
+        {
+            SaveSixthCommand.NotifyCanExecuteChanged();
+        };
+        SixthUser.PropertyChanged += (sender, e) =>
+        {
+            SaveSixthCommand.NotifyCanExecuteChanged();
         };
     }
 }

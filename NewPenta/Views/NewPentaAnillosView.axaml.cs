@@ -26,6 +26,22 @@ public partial class NewPentaAnillosView : UserControl
             "New Penta | Anillos PTN-086 | 10W / 20W",
             RecordNumber.Second,
             DcpControlCreator.CreateGrid(anillosDcps, "Second")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Anillos PTN-109", 
+            "New Penta | Anillos PTN-109 | 10W / 20W",
+            RecordNumber.Third,
+            DcpControlCreator.CreateGrid(anillosDcps, "Third")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Anillos PTN-103", 
+            "New Penta | Anillos PTN-103 | 10W / 20W",
+            RecordNumber.Forth,
+            DcpControlCreator.CreateGrid(anillosDcps, "Forth")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Anillos PTN-106", 
+            "New Penta | Anillos PTN-106 | 10W / 20W",
+            RecordNumber.Fifth,
+            DcpControlCreator.CreateGrid(anillosDcps, "Fifth")));
+        tabControl!.Items.Add(DcpControlCreator.CreateTabItem("Anillos PTN-115", 
+            "New Penta | Anillos PTN-115 | 10W / 20W",
+            RecordNumber.Sixth,
+            DcpControlCreator.CreateGrid(anillosDcps, "Sixth")));
     }
 
     private List<Dcp> anillosDcps = new List<Dcp>()
